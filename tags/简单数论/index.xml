@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>简单数论 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/</link>
+    <description>Recent content in 简单数论 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 11 Mar 2024 21:21:26 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>简单数论</title>
+      <link>https://one-ruri.github.io/posts/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/</link>
+      <pubDate>Mon, 11 Mar 2024 21:21:26 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/</guid>
+      <description>&lt;h2 id=&#34;1-模运算&#34;&gt;1 模运算&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;定义：模运算为 a 除以 m 的余数，记为 a mod m，有 a mod m = a % m。&lt;/li&gt;&#xA;&lt;li&gt;模运算是大数运算中的常用操作。&lt;/li&gt;&#xA;&lt;li&gt;如果一个数太大，无法直接输出，或者不需要直接输出，可以把它取模后，缩小数值再输出。&lt;/li&gt;&#xA;&lt;li&gt;Python 虽然能直接计算大数，不用担心数据溢出，但是大数乘法太耗时，所以也常用取模来缩小数值。&lt;/li&gt;&#xA;&lt;li&gt;一个简单应用，判断奇偶：a%2=0，a 是偶数；a%2=1，a 是奇数&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;例题刷题统计-2022-年第十三届省赛lanqiaooj-题号-2098&#34;&gt;例题：刷题统计 2022 年第十三届省赛，lanqiaoOJ 题号 2098&lt;/h3&gt;&#xA;&lt;p&gt;【问题描述】 小明决定从下周一开始努力刷题准备蓝桥杯竞赛。他计划周一至周五每天做 a 道题目，周六和周日每天做 b 道题目。请你帮小明计算，按照计划他将在第几天实现做题数大于等于 n 题？&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

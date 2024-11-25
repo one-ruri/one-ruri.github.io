@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>蓝桥云课 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E8%93%9D%E6%A1%A5%E4%BA%91%E8%AF%BE/</link>
+    <description>Recent content in 蓝桥云课 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 29 Jul 2024 11:46:59 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E8%93%9D%E6%A1%A5%E4%BA%91%E8%AF%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>刷爆蓝桥云课</title>
+      <link>https://one-ruri.github.io/posts/%E5%88%B7%E7%88%86%E8%93%9D%E6%A1%A5%E4%BA%91%E8%AF%BE/</link>
+      <pubDate>Mon, 29 Jul 2024 11:46:59 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E5%88%B7%E7%88%86%E8%93%9D%E6%A1%A5%E4%BA%91%E8%AF%BE/</guid>
+      <description>&lt;h1 id=&#34;算法模板题&#34;&gt;算法模板题&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;2024/7/29&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;蓝桥公园&#34;&gt;蓝桥公园&lt;/h2&gt;&#xA;&lt;p&gt;链接：&lt;a href=&#34;https://www.lanqiao.cn/problems/1121/learning/?page=1&amp;amp;first_category_id=1&amp;amp;second_category_id=8&#34;&gt;1121蓝桥公园&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;题目描述&#34;&gt;题目描述&lt;/h3&gt;&#xA;&lt;p&gt;小明喜欢观景，于是今天他来到了蓝桥公园。&lt;/p&gt;&#xA;&lt;p&gt;已知公园有 $N$ 个景点，景点和景点之间一共有 $M$ 条道路。小明有 $Q$ 个观景计划，每个计划包含一个起点 $st$ 和一个终点 $ed$，表示他想从 $st$ 去到 $ed$。但是小明的体力有限，对于每个计划他想走最少的路完成，你可以帮帮他吗？&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

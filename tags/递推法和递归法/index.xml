@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>递推法和递归法 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E9%80%92%E6%8E%A8%E6%B3%95%E5%92%8C%E9%80%92%E5%BD%92%E6%B3%95/</link>
+    <description>Recent content in 递推法和递归法 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 10 Mar 2024 16:34:00 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E9%80%92%E6%8E%A8%E6%B3%95%E5%92%8C%E9%80%92%E5%BD%92%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>递推法与递归法</title>
+      <link>https://one-ruri.github.io/posts/%E9%80%92%E6%8E%A8%E6%B3%95%E4%B8%8E%E9%80%92%E5%BD%92%E6%B3%95/</link>
+      <pubDate>Sun, 10 Mar 2024 16:34:00 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E9%80%92%E6%8E%A8%E6%B3%95%E4%B8%8E%E9%80%92%E5%BD%92%E6%B3%95/</guid>
+      <description>&lt;p&gt;[TOC]8a143f69d05e2054793e049e53e43fd4&lt;/p&gt;&#xA;&lt;h2 id=&#34;递推法与递归法&#34;&gt;递推法与递归法&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;递推法：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;递推法是一种在数学和其他领域广泛应用的重要方法，它在计算机科学中被用作一种关键的数值求解算法。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;知识点：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;递推算法&lt;/li&gt;&#xA;&lt;li&gt;递归算法&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;递推算法的特点&#34;&gt;递推算法的特点&lt;/h2&gt;&#xA;&lt;p&gt;递推法的核心在于找到递推关系式。这种方法可以将复杂的计算过程转化为简单的重复步骤，充分利用计算机在运行程序时的时间局部性和空间局部性。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

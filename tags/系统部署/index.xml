@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>系统部署 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/</link>
+    <description>Recent content in 系统部署 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 09 Jul 2024 19:08:01 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu部署记录</title>
+      <link>https://one-ruri.github.io/posts/ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 09 Jul 2024 19:08:01 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;h1 id=&#34;ubuntu-20046-live-server-amd64&#34;&gt;ubuntu-20.04.6-live-server-amd64&lt;/h1&gt;&#xA;&lt;h2 id=&#34;安装部署&#34;&gt;安装部署&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-制作一个u盘启动盘&#34;&gt;1. 制作一个U盘启动盘&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Ubuntu&lt;/strong&gt; iso&lt;strong&gt;下载地址&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/&#34;&gt;清华大学开源软件镜像站&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://cn.ubuntu.com/download&#34;&gt;官网下载&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;制作工具下载&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;del&gt;推荐使用rufus，因为免费&lt;/del&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://rufus.org.cn/&#34;&gt;安装地址&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;准备一个U盘，插上U盘，打开rufus，选择镜像文件，具体配置如下：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./../images/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/image-20240709200710588.png&#34; alt=&#34;image-20240709200710588&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;然后点击开始就行了&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

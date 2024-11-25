@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>二分算法 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 二分算法 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 11 Mar 2024 20:16:41 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>二分算法</title>
+      <link>https://one-ruri.github.io/posts/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 11 Mar 2024 20:16:41 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/</guid>
+      <description>&lt;h2 id=&#34;二分查找算法&#34;&gt;二分查找算法&lt;/h2&gt;&#xA;&lt;h4 id=&#34;知识点&#34;&gt;知识点&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;二分查找原理讲解&lt;/li&gt;&#xA;&lt;li&gt;在单调递增序列 &lt;code&gt;a&lt;/code&gt; 中查找 &lt;code&gt;x&lt;/code&gt; 或 &lt;code&gt;x&lt;/code&gt; 的后继&lt;/li&gt;&#xA;&lt;li&gt;在单调递增序列 &lt;code&gt;a&lt;/code&gt; 中查找 &lt;code&gt;x&lt;/code&gt; 或 &lt;code&gt;x&lt;/code&gt; 的前驱&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;二分查找算法讲解&#34;&gt;二分查找算法讲解&lt;/h2&gt;&#xA;&lt;p&gt;枚举查找即顺序查找，实现原理是逐个比较数组 &lt;code&gt;a[0:n-1]&lt;/code&gt; 中的元素，直到找到元素 &lt;code&gt;x&lt;/code&gt; 或搜索整个数组后确定 &lt;code&gt;x&lt;/code&gt; 不在其中。最坏情况下需要比较 &lt;code&gt;N&lt;/code&gt; 次，时间复杂度是 &lt;code&gt;O(n)&lt;/code&gt;，属于线性阶算法。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

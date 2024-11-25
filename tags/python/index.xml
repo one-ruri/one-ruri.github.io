@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/python/</link>
+    <description>Recent content in Python on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 09 Jul 2024 21:45:29 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kivy中文说明文档v1.0</title>
+      <link>https://one-ruri.github.io/posts/kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/</link>
+      <pubDate>Tue, 09 Jul 2024 21:45:29 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/</guid>
+      <description>&lt;h1 id=&#34;kivy简介&#34;&gt;Kivy简介&lt;/h1&gt;&#xA;&lt;p&gt;Kivy是Python的Gui的一种。&lt;/p&gt;&#xA;&lt;p&gt;网上关于使用python进行ui设计的文档很少，因此为了自己方便，也为了这个领域的发展，于是编写初稿。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;注&lt;/strong&gt;：本版本是在windows环境下使用的，后期其他系统可能会添加。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>python内置函数</title>
+      <link>https://one-ruri.github.io/posts/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Sat, 16 Mar 2024 17:52:58 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/</guid>
+      <description>&lt;p&gt;本文将这68个内置函数综合整理为12大类，正在学习Python基础的读者一定不要错过，建议收藏学习！&lt;br&gt;&#xA;内置函数就是Python给你提供的，拿来直接用的函数，比如print.，input等。&lt;br&gt;&#xA;截止到python版本3.6.2 ，python一共提供了68个内置函数，具体如下&lt;br&gt;&#xA;abs() dict() help() min() setattr() all() dir() hex() next() slice() any() divmod() id() object() sorted() ascii() enumerate() input() oct() staticmethod() bin() eval() int() open() str() bool() exec() isinstance() ord() sum() bytearray() ﬁlter() issubclass() pow() super() bytes() ﬂoat() iter() print() tuple() callable() format() len() property() type() chr() frozenset() list() range() vars() classmethod() getattr() locals() repr() zip() compile() globals() map() reversed() __import__() complex() hasattr() max() round() delattr() hash() memoryview() set()&lt;br&gt;&#xA;&lt;strong&gt;和数字相关&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;1. 数据类型&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

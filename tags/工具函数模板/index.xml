@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具函数模板 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/</link>
+    <description>Recent content in 工具函数模板 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 11 Mar 2024 16:37:11 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工具函数模板</title>
+      <link>https://one-ruri.github.io/posts/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Mon, 11 Mar 2024 16:37:11 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/</guid>
+      <description>&lt;h2 id=&#34;内置模板&#34;&gt;内置模板&lt;/h2&gt;&#xA;&lt;p&gt;我们前面讲了很多数据结构相关的知识，本节课程，我们主要讲解怎么不自己定义，而是使用我们所使用的编程语言中，已经定义好的数据结构。&lt;/p&gt;&#xA;&lt;p&gt;之前我们在栈那一节已经讲过栈的内置数据结构的使用，我们本章就不再进行讲解，我们这节课仍然采用那种方式进行讲解。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

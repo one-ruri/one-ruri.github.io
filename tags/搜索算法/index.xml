@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>搜索算法 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 搜索算法 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 10 Mar 2024 16:42:50 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搜索算法</title>
+      <link>https://one-ruri.github.io/posts/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sun, 10 Mar 2024 16:42:50 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</guid>
+      <description>&lt;h2 id=&#34;深度优先搜索&#34;&gt;深度优先搜索&lt;/h2&gt;&#xA;&lt;p&gt;Depth First Search 即 DFS，意为深度优先搜索，是所有的搜索手段之一。它是从某个状态开始，不断进行状态转移，直到不能转移后，向后回退，一直到遍历完所有的状态。&lt;/p&gt;&#xA;&lt;p&gt;本章题目难度较大，请大家仔细研读讲解和代码。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

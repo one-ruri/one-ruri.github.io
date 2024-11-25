@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python Flask on Walkssi</title>
+    <link>https://one-ruri.github.io/categories/python-flask/</link>
+    <description>Recent content in Python Flask on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 16 Jul 2024 18:43:18 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/categories/python-flask/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flask开发入门</title>
+      <link>https://one-ruri.github.io/posts/flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Tue, 16 Jul 2024 18:43:18 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</guid>
+      <description>&lt;h1 id=&#34;介绍&#34;&gt;介绍&lt;/h1&gt;&#xA;&lt;p&gt;对于springboot+vue、asp.net还是其他一些技术，我们实现网页都需要较长的学习时间，因此，为了快速开发，满足需求，我参考Python的Flask编写了这篇文章。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="蓝桥杯 - https://one-ruri.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
+    <meta name="author" content="Jack - https://one-ruri.github.io/">
+    
+    <meta name="msvalidate.01" content="B46311949B856F2A7015F366FB3CE878" />
+    <title>蓝桥杯</title>
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="https://one-ruri.github.io/style.min.d252ad53a5e6b2ae6b8c6c1661107189be3668e36c8dd61697bbe008595a7e04.css">
+    
+    <script type="text/javascript" src="/main.js" defer></script>
+    
+</head>
+<body class="active-animate ">
+        <div id="header"><div class="container-header">
+    <div id="vars" class="container-vars" style="display: none;">
+	{
+		"isSingleColumnOfPostList": true,
+		"hasFoldAllCodeBlocks": false,
+		"svgColor": "",
+		"en": false,
+		"dark": false
+	}
+</div>
+    <h1 class="title">
+        
+            蓝桥杯
+            
+        
+    </h1>
+
+    <div class="container-breadcrumb-nav">
+    
+    <div class="breadcrumb-nav-bar">
+        <div><a href="/"><svg t="1656411084410" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2954" width="16" height="16"><path d="M947.5 390.6l-377-290c-34.5-26.5-82.6-26.5-117.1 0l-377 290c-14 10.8-16.6 30.9-5.9 44.9 10.8 14 30.9 16.6 44.9 5.9l28.5-21.9V768c0 88.2 71.8 160 160 160h80c35.3 0 64-28.7 64-64V640c0-17.6 14.4-32 32-32h64c17.6 0 32 14.4 32 32v224c0 35.3 28.7 64 64 64h80c88.2 0 160-71.8 160-160V419.4l28.5 21.9c5.8 4.5 12.7 6.6 19.5 6.6 9.6 0 19.1-4.3 25.4-12.5 10.8-13.9 8.2-34-5.8-44.8zM816 768c0 52.9-43.1 96-96 96h-80V640c0-52.9-43.1-96-96-96h-64c-52.9 0-96 43.1-96 96v224h-80c-52.9 0-96-43.1-96-96V370.2l284.5-218.8c11.5-8.8 27.5-8.8 39 0L816 370.2V768z" fill="#6c757d" p-id="2955"></path></svg></a></div>
+        <div><a href="/nav"><svg t="1656411531924" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5827" width="16" height="16"><path d="M849.59197473 125.23018519L139.22930586 391.72854662a23.35052669 23.35052669 0 0 0-14.95414244 21.65490745c-0.12257519 9.70384955 5.61801843 18.46795771 14.40255493 22.04306141l318.42928099 129.25528056 119.51057092 320.39047893c3.06437293 8.23295069 10.35758221 13.89182751 18.7335381 14.87242563l2.7170774 0.14300521a22.79893918 22.79893918 0 0 0 21.20546682-15.36272638l259.51158924-729.54564933a23.8612558 23.8612558 0 0 0-5.31158128-24.55584682 22.3290685 22.3290685 0 0 0-23.9021142-5.43415649zM793.65694081 211.64552314l-196.63064161 552.75171747-91.91077952-246.37564122-253.62799211-102.96295445 542.16941324-203.4131218z" p-id="5828" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/search"><svg t="1656411627509" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1730" width="14" height="14"><path d="M469.333333 85.333333c211.968 0 384 172.032 384 384s-172.032 384-384 384-384-172.032-384-384 172.032-384 384-384z m0 682.666667c164.992 0 298.666667-133.674667 298.666667-298.666667 0-165.034667-133.674667-298.666667-298.666667-298.666666-165.034667 0-298.666667 133.632-298.666666 298.666666 0 164.992 133.632 298.666667 298.666666 298.666667z m362.026667 3.029333l120.704 120.661334-60.373333 60.373333-120.661334-120.704 60.330667-60.330667z" p-id="1731" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/posts"><svg t="1656411724198" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5655" width="12" height="12"><path d="M811.705761 1024H212.294239c-93.1199 0-174.823046-87.570975-174.823046-187.387854V162.322018C37.471193 69.776145 112.604921 0 212.294239 0H596.190595l7.015883 5.93161c111.74388 95.479788 185.857116 170.741078 279.614824 266.093304 29.65805 30.040735 61.165743 62.122454 96.436499 97.393211l7.271006 7.334787v459.859234c-0.063781 99.816879-81.703145 187.387854-174.823046 187.387854zM212.294239 49.94033c-72.391155 0-124.882716 47.261538-124.882716 112.381688v674.290128c0 71.94469 59.507443 137.383743 124.882716 137.383743h599.411522c65.311492 0 124.882716-65.439053 124.882716-137.383743V397.417876c-32.528184-32.464404-61.73977-62.250016-89.356836-90.377328-90.951355-92.418312-163.278729-165.957521-269.601245-257.163999H212.294239z" fill="#6c757d" p-id="5656"></path><path d="M936.588477 449.526752h-212.326129c-99.753099 0-187.324073-81.703145-187.324073-174.823046V49.94033a25.002055 25.002055 0 0 1 49.94033 0v224.763376c0 65.311492 65.502834 124.882716 137.383743 124.882716h212.326129a25.002055 25.002055 0 1 1 0 49.94033z" fill="#6c757d" p-id="5657"></path></svg></a></div>
+        <div><a href="/archive"><svg t="1656411795742" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7334" width="12" height="12"><path d="M884.224 522.24H504.32V141.824c0-16.896-13.824-30.72-30.72-30.72-120.32 0-233.472 47.616-317.952 134.144S26.112 445.952 29.184 566.784c2.56 114.688 49.152 222.72 131.072 304.128 81.92 81.408 189.952 128 304.64 130.56h10.24c117.76 0 227.84-45.568 312.32-128.512 86.528-85.504 133.632-199.68 132.608-321.024-0.512-2.048-1.536-29.696-35.84-29.696z m-140.288 307.712c-74.752 73.728-173.056 112.64-277.504 110.592-205.824-4.608-370.688-169.472-375.296-374.784-3.072-104.448 35.84-202.752 108.544-277.504 65.536-67.072 151.552-107.52 243.712-114.688v378.88c0 16.896 13.824 30.72 30.72 30.72 129.024 0 311.296 0 382.976 0.512-6.144 93.184-46.08 179.712-113.152 246.272z" fill="#6c757d" p-id="7335"></path><path d="M603.136 11.264c-8.192-0.512-15.872 3.072-22.016 8.704-5.632 5.632-9.216 13.824-9.216 22.016v378.88c0 16.896 13.824 30.72 30.72 30.72h378.88c16.896 0 30.72-13.824 30.72-30.72 0-223.744-183.808-407.552-409.088-409.6z m30.208 378.88V74.24c167.424 16.384 301.056 150.016 315.904 315.904h-315.904z" fill="#6c757d" p-id="7336"></path></svg></a></div>
+        <div id="light-dark" style="cursor: pointer;"><a><svg t="1656411842215" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5086" width="12" height="12"><path d="M1007.492874 384.513055c-8.795694-34.58307-21.189627-67.666874-36.682043-99.05151-2.698679-5.397358-10.894667-3.498287-10.894666 2.598728v0.299853c0 32.484098-6.896624 63.868734-19.890263 92.554691-10.694764 23.488501-25.487523 45.077933-43.978471 64.068635-41.779547 42.679107-99.05151 66.967217-158.722299 67.26707-61.869712 0.299853-119.941284-24.188159-162.920244-68.966238-40.280281-41.979449-62.56937-98.251902-62.269516-156.323473 0.399804-59.270984 23.588452-114.94373 65.567901-156.823229 19.59041-19.59041 42.179351-35.082826 66.667364-46.077443C672.956643 71.166451 704.041426 64.469729 736.125719 64.469729h1.299364c6.097015 0 8.096037-8.096037 2.598728-10.794715C708.739126 37.982696 675.655322 25.488812 641.172203 16.493216 599.492607 5.598549 555.714038-0.098662 510.536154 0.001289 222.37722 0.700947-7.41029 237.38508 0.185992 525.444064c7.096526 271.667008 225.889418 490.559851 497.456474 497.856279 287.559228 7.796183 524.14341-220.891864 525.842579-508.551044 0.299853-44.977981-5.297407-88.656599-15.992171-130.236244z m-83.15929 301.552378c-22.588942 53.27392-54.873137 101.250434-95.953027 142.330323-41.179841 41.179841-89.056403 73.464036-142.330324 95.953027-55.172991 23.288599-113.744317 35.182777-174.314666 35.182777s-119.141675-11.794226-174.314666-35.182777c-53.27392-22.588942-101.250434-54.873137-142.330323-95.953027-41.179841-41.179841-73.464036-89.056403-95.953027-142.330323C75.749001 630.892442 63.954774 572.221164 63.954774 511.750767s11.794226-119.141675 35.182777-174.314666c22.588942-53.27392 54.873137-101.250434 95.953027-142.330323 41.179841-41.179841 89.056403-73.464036 142.330323-95.953027C392.593892 75.7642 451.26517 63.969974 511.735567 63.969974c13.99315 0 27.886348 0.599706 41.679596 1.89907C489.246577 118.643209 448.266638 198.704016 448.266638 288.360126c0 159.022152 128.836929 287.859081 287.859081 287.859081 89.156354 0 168.817357-40.580134 221.691473-104.149015 1.099462 13.09359 1.699168 26.387082 1.699168 39.680575 0 60.470397-11.794226 119.141675-35.182776 174.314666z" p-id="5087" fill="#6c757d"></path></svg></a></div>
+        
+    </div>
+
+    
+</div>
+
+    
+    
+</div>
+</div>
+        <div id="content">
+<div class="container-main container-list">
+    <div class="content">
+        
+    </div>
+
+     
+        <div class="count">共有 8 篇文章</div>
+    
+    
+    <div class="list list-single-col">
+        
+        
+        <div class="recentf">
+            <div class="desc">📅  最近更新 </div>
+            
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://one-ruri.github.io/posts/hello-world/">Hello World</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://one-ruri.github.io/posts/vue/">vue</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://one-ruri.github.io/posts/mysql8-4%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81%E8%A7%84%E5%88%99%E4%B8%BAmysql-native-password/">MySQL8.4设置密码规则为mysql_native_password</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://one-ruri.github.io/posts/typora%E9%85%8D%E7%BD%AE%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0gitee%E4%BB%93%E5%BA%93%E7%89%88/">typora配置图片上传（gitee仓库版）</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://one-ruri.github.io/posts/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%AD%A6%E5%AE%8C%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">一篇文章学完接口测试</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://one-ruri.github.io/posts/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%AD%A6%E5%AE%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">一篇文章学完自动化测试</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://one-ruri.github.io/posts/%E5%88%B7%E7%88%86%E8%93%9D%E6%A1%A5%E4%BA%91%E8%AF%BE/">刷爆蓝桥云课</a>
+                    </div>
+                </div>
+                
+            
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://one-ruri.github.io/posts/%E8%93%9D%E6%A1%A5%E5%B8%B8%E8%A7%84%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 蓝桥常规考点总结 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-05-30
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-05-30
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+		</div>
+		<div class="tag">
+			
+			 - 
+			
+			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF">蓝桥杯</a>
+			
+		</div>
+	</div>
+</div><div class="summary"><h1 id="动态规划">动态规划</h1>
+<h2 id="基础dp">基础DP</h2>
+<h3 id="线性dp">线性DP</h3>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%B8%B8%E8%A7%84%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/image-20240526132127462.png" alt="image-20240526132127462"></p>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%B8%B8%E8%A7%84%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/image-20240526132140926.png" alt="image-20240526132140926"></p>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%B8%B8%E8%A7%84%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/image-20240526132149001.png" alt="image-20240526132149001"></p>
+<h4 id="动态规划分析步骤">动态规划分析步骤</h4>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%B8%B8%E8%A7%84%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/image-20240526132222766.png" alt="image-20240526132222766"></p>
+<h4 id="模板题破损的楼梯httpswwwlanqiaocnproblems3367learning">模板题——<a href="https://www.lanqiao.cn/problems/3367/learning">破损的楼梯</a></h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#d14">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">3367 破损的楼梯
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">https://www.lanqiao.cn/problems/3367/learning
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">这是一个典型的线性DP问题，dp[i]表示到达第i阶楼梯的方法数
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">状态转移方程：dp[i]=dp[i-1]+dp[i-2]
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">状态压缩：dp[i]只与dp[i-1]和dp[i-2]有关，所以可以压缩
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">时间复杂度：O(n)
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">空间复杂度：O(n)
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>N <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">int</span>(<span style="color:#099">1e5</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">10</span>)
+</span></span><span style="display:flex;"><span>mod <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">int</span>(<span style="color:#099">1e9</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">7</span>)
+</span></span><span style="display:flex;"><span>n, m <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split())
+</span></span><span style="display:flex;"><span>a <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">list</span>(<span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split()))
+</span></span><span style="display:flex;"><span>vis <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">*</span> N
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> a: vis[i] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>
+</span></span><span style="display:flex;"><span>dp <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">*</span> N
+</span></span><span style="display:flex;"><span>dp[<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>
+</span></span><span style="display:flex;"><span>dp[<span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span> <span style="color:#000;font-weight:bold">-</span> vis[<span style="color:#099">1</span>]
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">2</span>, n <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">if</span> vis[i]:
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">continue</span>
+</span></span><span style="display:flex;"><span>    dp[i] <span style="color:#000;font-weight:bold">=</span> (dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">+</span> dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">2</span>]) <span style="color:#000;font-weight:bold">%</span> mod
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">print</span>(dp[n])
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>n,m<span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>,<span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split())
+</span></span><span style="display:flex;"><span>a<span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">list</span>(<span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>,<span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split()))
+</span></span><span style="display:flex;"><span>dp<span style="color:#000;font-weight:bold">=</span>[<span style="color:#099">0</span>]<span style="color:#000;font-weight:bold">*</span>(n<span style="color:#000;font-weight:bold">+</span><span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span>tp<span style="color:#000;font-weight:bold">=</span>[<span style="color:#099">0</span>]<span style="color:#000;font-weight:bold">*</span>(n<span style="color:#000;font-weight:bold">+</span><span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> a:
+</span></span><span style="display:flex;"><span>  tp[i]<span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span>
+</span></span><span style="display:flex;"><span>dp[<span style="color:#099">0</span>]<span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span>
+</span></span><span style="display:flex;"><span>dp[<span style="color:#099">1</span>]<span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">-</span>tp[<span style="color:#099">1</span>]
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">2</span>,n<span style="color:#000;font-weight:bold">+</span><span style="color:#099">1</span>):
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">if</span> tp[i]<span style="color:#000;font-weight:bold">==</span><span style="color:#099">1</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">continue</span>
+</span></span><span style="display:flex;"><span>  dp[i]<span style="color:#000;font-weight:bold">=</span>dp[i<span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>]<span style="color:#000;font-weight:bold">+</span>dp[i<span style="color:#000;font-weight:bold">-</span><span style="color:#099">2</span>]
+</span></span><span style="display:flex;"><span>mod<span style="color:#000;font-weight:bold">=</span><span style="color:#099">10</span><span style="color:#000;font-weight:bold">**</span><span style="color:#099">9</span><span style="color:#000;font-weight:bold">+</span><span style="color:#099">7</span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">print</span>(dp[i]<span style="color:#000;font-weight:bold">%</span>mod)
+</span></span></code></pre></div><h3 id="二维dp">二维DP</h3>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%B8%B8%E8%A7%84%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/image-20240526132351934.png" alt="image-20240526132351934"></p>
+<h4 id="分析步骤">分析步骤</h4>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%B8%B8%E8%A7%84%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/image-20240526132407561.png" alt="image-20240526132407561"></p>
+<h4 id="模板题数字三角形httpswwwlanqiaocnproblems1536learning">模板题——<a href="https://www.lanqiao.cn/problems/1536/learning">数字三角形</a></h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> <span style="color:#555">os</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> <span style="color:#555">sys</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 请在此输入您的代码</span>
+</span></span><span style="display:flex;"><span>N <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">int</span>(<span style="color:#0086b3">input</span>())
+</span></span><span style="display:flex;"><span>dp <span style="color:#000;font-weight:bold">=</span> [<span style="color:#0086b3">list</span>(<span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split())) <span style="color:#000;font-weight:bold">for</span> _ <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(N)]
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">1</span>, N):
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">for</span> j <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(i <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">if</span> j <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">0</span>:
+</span></span><span style="display:flex;"><span>            dp[i][j] <span style="color:#000;font-weight:bold">+=</span> dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>][j]
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">elif</span> j <span style="color:#000;font-weight:bold">==</span> i:
+</span></span><span style="display:flex;"><span>            dp[i][j] <span style="color:#000;font-weight:bold">+=</span> dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>][j <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>            dp[i][j] <span style="color:#000;font-weight:bold">+=</span> <span style="color:#0086b3">max</span>(dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>][j <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>], dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>][j])
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">print</span>(<span style="color:#0086b3">max</span>(dp[N <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>]))
+</span></span></code></pre></div><p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%B8%B8%E8%A7%84%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/image-20240526132533080.png" alt="image-20240526132533080"></p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/%E8%93%9D%E6%A1%A5%E5%B8%B8%E8%A7%84%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://one-ruri.github.io/posts/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%9B%BD%E8%B5%9B%E8%AF%95%E9%A2%98%E8%A7%A3%E6%9E%90/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 蓝桥杯国赛试题解析 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-05-26
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-05-26
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+		</div>
+		<div class="tag">
+			
+			 - 
+			
+			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF">蓝桥杯</a>
+			
+		</div>
+	</div>
+</div><div class="summary"><h1 id="第十四届python大学c组">第十四届Python大学C组</h1>
+<h2 id="跑步计划httpswwwlanqiaocnproblems17113learning"><a href="https://www.lanqiao.cn/problems/17113/learning">跑步计划</a></h2>
+<h3 id="问题描述">问题描述</h3>
+<p>小蓝计划在某天的日期中出现 $1$ 时跑 $5$ 千米，否则只跑 $1$ 千米。注意日期中出现 $1$ 不仅指年月日也指星期。</p>
+<p>请问按照小蓝的计划，$2023$ 年小蓝总共会跑步锻炼多少千米?例如，$5$ 月 $1$ 日、$1$ 月 $13$ 日、$11$ 月 $5$ 日、$4$ 月 $3$ 日 (星期一) 小蓝会跑 $5$ 千米，而 $5$ 月 $23$ 日小蓝会跑 $1$ 千米 (示例日期均为 $2023$ 年)</p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%9B%BD%E8%B5%9B%E8%AF%95%E9%A2%98%E8%A7%A3%E6%9E%90/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://one-ruri.github.io/posts/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 蓝桥国赛知识梳理 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-05-24
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-05-24
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+		</div>
+		<div class="tag">
+			
+			 - 
+			
+			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF">蓝桥杯</a>
+			
+		</div>
+	</div>
+</div><div class="summary"><h1 id="动态规划">动态规划</h1>
+<h2 id="基础">基础</h2>
+<h3 id="线性dp">线性DP</h3>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/image-20240526132127462.png" alt="image-20240526132127462"></p>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/image-20240526132140926.png" alt="image-20240526132140926"></p>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/image-20240526132149001.png" alt="image-20240526132149001"></p>
+<h4 id="动态规划分析步骤">动态规划分析步骤</h4>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/image-20240526132222766.png" alt="image-20240526132222766"></p>
+<h4 id="模板题破损的楼梯httpswwwlanqiaocnproblems3367learning">模板题——<a href="https://www.lanqiao.cn/problems/3367/learning">破损的楼梯</a></h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#d14">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">3367 破损的楼梯
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">https://www.lanqiao.cn/problems/3367/learning
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">这是一个典型的线性DP问题，dp[i]表示到达第i阶楼梯的方法数
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">状态转移方程：dp[i]=dp[i-1]+dp[i-2]
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">状态压缩：dp[i]只与dp[i-1]和dp[i-2]有关，所以可以压缩
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">时间复杂度：O(n)
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">空间复杂度：O(n)
+</span></span></span><span style="display:flex;"><span><span style="color:#d14">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>N <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">int</span>(<span style="color:#099">1e5</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">10</span>)
+</span></span><span style="display:flex;"><span>mod <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">int</span>(<span style="color:#099">1e9</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">7</span>)
+</span></span><span style="display:flex;"><span>n, m <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split())
+</span></span><span style="display:flex;"><span>a <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">list</span>(<span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split()))
+</span></span><span style="display:flex;"><span>vis <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">*</span> N
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> a: vis[i] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>
+</span></span><span style="display:flex;"><span>dp <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">*</span> N
+</span></span><span style="display:flex;"><span>dp[<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>
+</span></span><span style="display:flex;"><span>dp[<span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span> <span style="color:#000;font-weight:bold">-</span> vis[<span style="color:#099">1</span>]
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">2</span>, n <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">if</span> vis[i]:
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">continue</span>
+</span></span><span style="display:flex;"><span>    dp[i] <span style="color:#000;font-weight:bold">=</span> (dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">+</span> dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">2</span>]) <span style="color:#000;font-weight:bold">%</span> mod
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">print</span>(dp[n])
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>n,m<span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>,<span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split())
+</span></span><span style="display:flex;"><span>a<span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">list</span>(<span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>,<span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split()))
+</span></span><span style="display:flex;"><span>dp<span style="color:#000;font-weight:bold">=</span>[<span style="color:#099">0</span>]<span style="color:#000;font-weight:bold">*</span>(n<span style="color:#000;font-weight:bold">+</span><span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span>tp<span style="color:#000;font-weight:bold">=</span>[<span style="color:#099">0</span>]<span style="color:#000;font-weight:bold">*</span>(n<span style="color:#000;font-weight:bold">+</span><span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> a:
+</span></span><span style="display:flex;"><span>  tp[i]<span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span>
+</span></span><span style="display:flex;"><span>dp[<span style="color:#099">0</span>]<span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span>
+</span></span><span style="display:flex;"><span>dp[<span style="color:#099">1</span>]<span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">-</span>tp[<span style="color:#099">1</span>]
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">2</span>,n<span style="color:#000;font-weight:bold">+</span><span style="color:#099">1</span>):
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">if</span> tp[i]<span style="color:#000;font-weight:bold">==</span><span style="color:#099">1</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">continue</span>
+</span></span><span style="display:flex;"><span>  dp[i]<span style="color:#000;font-weight:bold">=</span>dp[i<span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>]<span style="color:#000;font-weight:bold">+</span>dp[i<span style="color:#000;font-weight:bold">-</span><span style="color:#099">2</span>]
+</span></span><span style="display:flex;"><span>mod<span style="color:#000;font-weight:bold">=</span><span style="color:#099">10</span><span style="color:#000;font-weight:bold">**</span><span style="color:#099">9</span><span style="color:#000;font-weight:bold">+</span><span style="color:#099">7</span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">print</span>(dp[i]<span style="color:#000;font-weight:bold">%</span>mod)
+</span></span></code></pre></div><h3 id="二维dp">二维DP</h3>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/image-20240526132351934.png" alt="image-20240526132351934"></p>
+<h4 id="分析步骤">分析步骤</h4>
+<p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/image-20240526132407561.png" alt="image-20240526132407561"></p>
+<h4 id="模板题数字三角形httpswwwlanqiaocnproblems1536learning">模板题——<a href="https://www.lanqiao.cn/problems/1536/learning">数字三角形</a></h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> <span style="color:#555">os</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> <span style="color:#555">sys</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 请在此输入您的代码</span>
+</span></span><span style="display:flex;"><span>N <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">int</span>(<span style="color:#0086b3">input</span>())
+</span></span><span style="display:flex;"><span>dp <span style="color:#000;font-weight:bold">=</span> [<span style="color:#0086b3">list</span>(<span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split())) <span style="color:#000;font-weight:bold">for</span> _ <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(N)]
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">1</span>, N):
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">for</span> j <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(i <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">if</span> j <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">0</span>:
+</span></span><span style="display:flex;"><span>            dp[i][j] <span style="color:#000;font-weight:bold">+=</span> dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>][j]
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">elif</span> j <span style="color:#000;font-weight:bold">==</span> i:
+</span></span><span style="display:flex;"><span>            dp[i][j] <span style="color:#000;font-weight:bold">+=</span> dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>][j <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>            dp[i][j] <span style="color:#000;font-weight:bold">+=</span> <span style="color:#0086b3">max</span>(dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>][j <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>], dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>][j])
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">print</span>(<span style="color:#0086b3">max</span>(dp[N <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>]))
+</span></span></code></pre></div><p><img src="./../images/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/image-20240526132533080.png" alt="image-20240526132533080"></p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://one-ruri.github.io/posts/19-23%E5%B9%B4%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 19-23年蓝桥杯真题 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-04-11
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-04-11
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+		</div>
+		<div class="tag">
+			
+			 - 
+			
+			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF">蓝桥杯</a>
+			
+		</div>
+	</div>
+</div><div class="summary"><ul>
+<li><a href="https://www.luogu.com.cn/problem/P8678">P8678 [蓝桥杯 2019 省 A] 填空问题</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8679">P8679 [蓝桥杯 2019 省 B] 填空问题</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8680">P8680 [蓝桥杯 2019 省 B] 特别数的和</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8681">P8681 [蓝桥杯 2019 省 AB] 完全二叉树的权值</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8682">P8682 [蓝桥杯 2019 省 B] 等差数列</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8683">P8683 [蓝桥杯 2019 省 B] 后缀表达式</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8684">P8684 [蓝桥杯 2019 省 B] 灵能传输</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8685">P8685 [蓝桥杯 2019 省 A] 外卖店优先级</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8686">P8686 [蓝桥杯 2019 省 A] 修改数组</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8687">P8687 [蓝桥杯 2019 省 A] 糖果</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8688">P8688 [蓝桥杯 2019 省 A] 组合数问题</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8704">P8704 [蓝桥杯 2020 省 A1] 填空问题</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8705">P8705 [蓝桥杯 2020 省 B1] 填空问题</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8706">P8706 [蓝桥杯 2020 省 AB1] 解码</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8707">P8707 [蓝桥杯 2020 省 AB1] 走方格</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8708">P8708 [蓝桥杯 2020 省 A1] 整数小拼接</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8709">P8709 [蓝桥杯 2020 省 A1] 超级胶水</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8710">P8710 [蓝桥杯 2020 省 AB1] 网络分析</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8711">P8711 [蓝桥杯 2020 省 B1] 整除序列</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8712">P8712 [蓝桥杯 2020 省 B1] 整数拼接</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8713">P8713 [蓝桥杯 2020 省 A2] 填空问题</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8714">P8714 [蓝桥杯 2020 省 B2] 填空问题</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8715">P8715 [蓝桥杯 2020 省 AB2] 子串分值</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8716">P8716 [蓝桥杯 2020 省 AB2] 回文日期</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8717">P8717 [蓝桥杯 2020 省 AB2] 成绩分析</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8718">P8718 [蓝桥杯 2020 省 A2] 荒岛探测</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8719">P8719 [蓝桥杯 2020 省 AB2] 字串排序</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8720">P8720 [蓝桥杯 2020 省 B2] 平面切分</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8721">P8721 [蓝桥杯 2020 省 AB3] 填空问题(缺少 inc.txt, E 题数据)</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8722">P8722 [蓝桥杯 2020 省 AB3] 日期识别</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8723">P8723 [蓝桥杯 2020 省 AB3] 乘法表</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8724">P8724 [蓝桥杯 2020 省 AB3] 限高杆</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8725">P8725 [蓝桥杯 2020 省 AB3] 画中漂流</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8726">P8726 [蓝桥杯 2020 省 AB3] 旅行家</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8740">P8740 [蓝桥杯 2021 省 A] 填空问题</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8741">P8741 [蓝桥杯 2021 省 B] 填空问题</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8742">P8742 [蓝桥杯 2021 省 AB] 砝码称重</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8743">P8743 [蓝桥杯 2021 省 A] 异或数列</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8744">P8744 [蓝桥杯 2021 省 A] 左孩子右兄弟</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8745">P8745 [蓝桥杯 2021 省 AB] 括号序列</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8746">P8746 [蓝桥杯 2021 省 A] 分果果</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8747">P8747 [蓝桥杯 2021 省 B] 双向排序</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8748">P8748 [蓝桥杯 2021 省 B] 时间显示</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8749">P8749 [蓝桥杯 2021 省 B] 杨辉三角形</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8750">P8750 [蓝桥杯 2021 省 A2] 填空问题</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8751">P8751 [蓝桥杯 2021 省 B2] 填空问题</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8752">P8752 [蓝桥杯 2021 省 B2] 特殊年份</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8753">P8753 [蓝桥杯 2021 省 AB2] 小平方</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8754">P8754 [蓝桥杯 2021 省 AB2] 完全平方数</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8755">P8755 [蓝桥杯 2021 省 AB2] 负载均衡</a></li>
+</ul></div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://one-ruri.github.io/posts/%E8%93%9D%E6%A1%A5%E6%9D%AF%E6%A8%A1%E6%8B%9F%E8%B5%9B%E6%B1%87%E6%80%BB/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 蓝桥杯模拟赛 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-04-05
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-04-05
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+		</div>
+		<div class="tag">
+			
+			 - 
+			
+			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF">蓝桥杯</a>
+			
+		</div>
+	</div>
+</div><div class="summary"><h1 id="小郑的蓝桥平衡串">小郑的蓝桥平衡串</h1>
+<h3 id="问题描述">问题描述</h3>
+<p>平衡串指的是一个字符串，其中包含两种不同字符，并且这两种字符的数量相等。</p>
+<p>例如，$ababab$ 和 $aababb$ 都是平衡串，因为每种字符各有三个，而 $abaab$ 和 $aaaab$ 都不是平衡串，因为它们的字符数量不相等。</p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/%E8%93%9D%E6%A1%A5%E6%9D%AF%E6%A8%A1%E6%8B%9F%E8%B5%9B%E6%B1%87%E6%80%BB/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://one-ruri.github.io/posts/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB41-52/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 蓝桥题目汇总41-52 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-03-22
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-03-22
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+		</div>
+		<div class="tag">
+			
+			 - 
+			
+			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF">蓝桥杯</a>
+			
+		</div>
+	</div>
+</div><div class="summary"><h1 id="出差">出差</h1>
+<h3 id="问题描述">问题描述</h3>
+<p>$\mathrm{A}$ 国有 $N$ 个城市, 编号为 $1 \ldots N$ 。小明是编号为 1 的城市中一家公司的员 工, 今天突然接到了上级通知需要去编号为 $N$ 的城市出差。</p>
+<p>由于疫情原因, 很多直达的交通方式暂时关闭, 小明无法乘坐飞机直接从 城市 1 到达城市 $N$, 需要通过其他城市进行陆路交通中转。小明通过交通信息 网, 查询到了 $M$ 条城市之间仍然还开通的路线信息以及每一条路线需要花费的 时间。</p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB41-52/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://one-ruri.github.io/posts/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 蓝桥题目汇总21-40 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-03-22
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-03-22
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+		</div>
+		<div class="tag">
+			
+			 - 
+			
+			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF">蓝桥杯</a>
+			
+		</div>
+	</div>
+</div><div class="summary"><h1 id="大学里到树木要打药">大学里到树木要打药</h1>
+<h3 id="题目描述">题目描述</h3>
+<p>教室外有 $N$ 棵树（树的编号从 $0\sim N-1$），根据不同的位置和树种，学校要对其上不同的药。</p>
+<p>因为树的排列成线性，且非常长，我们可以将它们看作一条直线给他们编号。</p>
+<p>对于树的药是成区间分布，比如 $3 \sim 5$ 号的树靠近下水道，所以他们要用驱蚊虫的药， $20 \sim 26$ 号的树，他们排水不好，容易涝所以要给他们用点促进根系的药 $\cdots$诸如此类。</p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://one-ruri.github.io/posts/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB1-20/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 蓝桥题目汇总1-20 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-03-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-03-15
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+		</div>
+		<div class="tag">
+			
+			 - 
+			
+			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF">蓝桥杯</a>
+			
+		</div>
+	</div>
+</div><div class="summary"><h1 id="门牌制作">门牌制作</h1>
+<h3 id="题目描述">题目描述</h3>
+<p><strong>本题为填空题，只需要算出结果后，在代码中使用输出语句将所填结果输出即可。</strong></p>
+<p>小蓝要为一条街的住户制作门牌号。</p>
+<p>这条街一共有 $2020$ 位住户，门牌号从 $1$ 到 $2020$ 编号。</p>
+<p>小蓝制作门牌的方法是先制作 $0$ 到 $9$ 这几个数字字符，最后根据需要将字符粘贴到门牌上，例如门牌 1017 需要依次粘贴字符 $1、0、1、7$，即需要 $1$ 个字符 $0$，$2$ 个字符 $1$，$1$ 个字符 $7$。</p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB1-20/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+    </div>
+
+    <div class="container-pagination">
+    
+    </div>
+</div>
+
+        </div>
+        <div id="footer"><div class="container-footer">
+    
+    <a href="//beian.miit.gov.cn" target="_blank">
+        
+        豫ICP备2022002918号-1
+        
+    </a>
+    <a id="s" href="/secrets">&nbsp;</a>
+    
+</div></div>
+    </body>
+</html>

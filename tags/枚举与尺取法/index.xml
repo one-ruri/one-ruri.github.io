@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>枚举与尺取法 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E6%9E%9A%E4%B8%BE%E4%B8%8E%E5%B0%BA%E5%8F%96%E6%B3%95/</link>
+    <description>Recent content in 枚举与尺取法 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 11 Mar 2024 16:00:12 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E6%9E%9A%E4%B8%BE%E4%B8%8E%E5%B0%BA%E5%8F%96%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>枚举法与尺取法</title>
+      <link>https://one-ruri.github.io/posts/%E6%9E%9A%E4%B8%BE%E6%B3%95%E4%B8%8E%E5%B0%BA%E5%8F%96%E6%B3%95/</link>
+      <pubDate>Mon, 11 Mar 2024 16:00:12 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E6%9E%9A%E4%B8%BE%E6%B3%95%E4%B8%8E%E5%B0%BA%E5%8F%96%E6%B3%95/</guid>
+      <description>&lt;p&gt;在之前的课程中，我们深入讨论了打表法与模拟法的暴力解法。提到暴力，我们通常会首先想到枚举。然而，枚举实际上是一门技术，要确保能够穷尽所有可能的情况并不容易。因此，在本节课中，我们将详细介绍枚举法的技巧，以确保能够完整地列举出所有情况，不漏一种。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

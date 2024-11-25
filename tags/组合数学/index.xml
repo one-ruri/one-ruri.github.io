@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>组合数学 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 组合数学 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 11 Mar 2024 21:23:37 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>组合数学</title>
+      <link>https://one-ruri.github.io/posts/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Mon, 11 Mar 2024 21:23:37 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</guid>
+      <description>&lt;h2 id=&#34;组合数学&#34;&gt;组合数学&lt;/h2&gt;&#xA;&lt;h2 id=&#34;计数原理加法原理&#34;&gt;计数原理：加法原理&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;加法原理： 集合 $S$ 被分成两两不相交的部分 $S_1, S_2, S_3, &amp;hellip;, S_m$，那么 $S$ 的对象数目等于：$|S| = |S_1| + |S_2| + |S_3| + &amp;hellip; + |S_m|$&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;例： 一个学生想学一门数学课，一门文化课，但不能同时选，现在从 $4$ 门数学课和 $4$ 门文化课中选，一共有 $4 + 4 = 8$ 种方法选一门课。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

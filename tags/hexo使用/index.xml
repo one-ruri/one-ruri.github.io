@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hexo使用 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/hexo%E4%BD%BF%E7%94%A8/</link>
+    <description>Recent content in Hexo使用 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Nov 2024 08:18:12 +0800</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/hexo%E4%BD%BF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hexo存在问题解决方案</title>
+      <link>https://one-ruri.github.io/posts/hexo%E5%AD%98%E5%9C%A8%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Sun, 10 Mar 2024 09:49:03 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/hexo%E5%AD%98%E5%9C%A8%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://molunerfinn.com/make-a-hexo-theme/#%E9%A1%B5%E9%9D%A2&#34;&gt;Hexo主题开发经验杂谈 | MARKSZのBlog (molunerfinn.com)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;注意事项&#34;&gt;注意事项&lt;/h1&gt;&#xA;&lt;p&gt;../../source/images/${filename}&lt;/p&gt;&#xA;&lt;p&gt;在使用pandoc本地导出文件后，hexo-renderer-marked存在bug，需要在清除导出使用pandoc路径后执行npm命令二次安装&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello World</title>
+      <link>https://one-ruri.github.io/posts/hello-world/</link>
+      <pubDate>Sat, 09 Mar 2024 17:41:53 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/hello-world/</guid>
+      <description>&lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h2&gt;&#xA;&lt;h3 id=&#34;create-a-new-post&#34;&gt;Create a new post&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hexo new &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;My New Post&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/writing.html&#34;&gt;Writing&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;run-server&#34;&gt;Run server&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hexo server&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/server.html&#34;&gt;Server&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;generate-static-files&#34;&gt;Generate static files&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hexo generate&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/generating.html&#34;&gt;Generating&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;Deploy to remote sites&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hexo deploy&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/one-command-deployment.html&#34;&gt;Deployment&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>hexo——安装部署使用</title>
+      <link>https://one-ruri.github.io/posts/hexo%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sat, 09 Mar 2024 17:41:53 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/hexo%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;h1 id=&#34;hexo安装&#34;&gt;Hexo安装&lt;/h1&gt;&#xA;&lt;p&gt;可以参照hexo官网给出的文档，官网文档：https://hexo.io/zh-cn/docs/&lt;/p&gt;&#xA;&lt;p&gt;安装前需要先安装git工具和nodejs&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;git工具 官网： &lt;a href=&#34;https://git-scm.com/download/win&#34;&gt;https://git-scm.com/download/win&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;nodejs 下载地址：https://registry.npmmirror.com/binary.html?path=node/（淘宝镜像-国内官网访问慢）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;安装hexo（全局）&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

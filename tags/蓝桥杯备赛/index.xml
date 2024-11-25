@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>蓝桥杯备赛 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/</link>
+    <description>Recent content in 蓝桥杯备赛 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 01 Apr 2024 17:00:13 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023年蓝桥杯省赛B组试题</title>
+      <link>https://one-ruri.github.io/posts/2023%E5%B9%B4%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%81%E8%B5%9Bb%E7%BB%84%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 01 Apr 2024 17:00:13 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/2023%E5%B9%B4%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%81%E8%B5%9Bb%E7%BB%84%E8%AF%95%E9%A2%98/</guid>
+      <description>&lt;h2 id=&#34;题目总览&#34;&gt;题目总览&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;2023&lt;/li&gt;&#xA;&lt;li&gt;硬币兑换&lt;/li&gt;&#xA;&lt;li&gt;松散子序列&lt;/li&gt;&#xA;&lt;li&gt;管道&lt;/li&gt;&#xA;&lt;li&gt;保险箱&lt;/li&gt;&#xA;&lt;li&gt;树上选点&lt;/li&gt;&#xA;&lt;li&gt;T字消除&lt;/li&gt;&#xA;&lt;li&gt;独一无二&lt;/li&gt;&#xA;&lt;li&gt;异或和&lt;/li&gt;&#xA;&lt;li&gt;混论的数组&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2023---蓝桥云课-lanqiaocnhttpswwwlanqiaocnproblems3496learningpage1first_category_id1tags2023&#34;&gt;&lt;a href=&#34;https://www.lanqiao.cn/problems/3496/learning/?page=1&amp;amp;first_category_id=1&amp;amp;tags=2023&#34;&gt;2023 - 蓝桥云课 (lanqiao.cn)&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;问题描述&#34;&gt;问题描述&lt;/h3&gt;&#xA;&lt;p&gt;请求出在 $12345678$ （含）至 $98765432$ （含）中，有多少个数中完全不包含 $2023$。&lt;/p&gt;&#xA;&lt;p&gt;完全不包含 $2023$ 是指无论将这个数的哪些数位移除都不能得到 $2023$。例如 $20322175$，$33220022$ 都完全不包含 $2023$，而 $20230415$，$20193213$ 则含有 $2023$（后者取第 $1,2,6,8$ 个数位）。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2023年蓝桥杯省赛c组试题</title>
+      <link>https://one-ruri.github.io/posts/2023%E5%B9%B4%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%81%E8%B5%9Bc%E7%BB%84%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Sun, 31 Mar 2024 10:45:34 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/2023%E5%B9%B4%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%81%E8%B5%9Bc%E7%BB%84%E8%AF%95%E9%A2%98/</guid>
+      <description>&lt;h2 id=&#34;题目总览&#34;&gt;题目总览&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;1.求和&lt;/li&gt;&#xA;&lt;li&gt;2.分糖果&lt;/li&gt;&#xA;&lt;li&gt;3.三国游戏&lt;/li&gt;&#xA;&lt;li&gt;4.平均&lt;/li&gt;&#xA;&lt;li&gt;5.填充&lt;/li&gt;&#xA;&lt;li&gt;6.棋盘&lt;/li&gt;&#xA;&lt;li&gt;7.子矩阵&lt;/li&gt;&#xA;&lt;li&gt;8.公因数匹配&lt;/li&gt;&#xA;&lt;li&gt;9.异或和之差&lt;/li&gt;&#xA;&lt;li&gt;10.太阳&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3求和---蓝桥云课-lanqiaocnhttpswwwlanqiaocnproblems3493learningpage1first_category_id1second_category_id3tags2023省赛&#34;&gt;&lt;a href=&#34;https://www.lanqiao.cn/problems/3493/learning/?page=1&amp;amp;first_category_id=1&amp;amp;second_category_id=3&amp;amp;tags=2023,%E7%9C%81%E8%B5%9B&#34;&gt;3.求和 - 蓝桥云课 (lanqiao.cn)&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;问题描述&#34;&gt;问题描述&lt;/h3&gt;&#xA;&lt;p&gt;求 $1$ （含）至 $20230408$ （含）中每个数的和。&lt;/p&gt;&#xA;&lt;h3 id=&#34;答案提交&#34;&gt;答案提交&lt;/h3&gt;&#xA;&lt;p&gt;这是一道结果填空的题，你只需要算出结果后提交即可。本题的结果为一个整数，在提交答案时只填写这个整数，填写多余的内容将无法得分。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>算法学习笔记</title>
+      <link>https://one-ruri.github.io/posts/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 31 Mar 2024 09:20:07 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;h1 id=&#34;前缀和&#34;&gt;前缀和&lt;/h1&gt;&#xA;&lt;p&gt;前缀和是：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0086b3&#34;&gt;sum&lt;/span&gt;[i]&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;a[&lt;span style=&#34;color:#099&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;a[&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;]&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;……&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;a[i]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;前缀和的性质&#34;&gt;前缀和的性质&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#第一条性质用于处理前缀和&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0086b3&#34;&gt;sum&lt;/span&gt;[i]&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0086b3&#34;&gt;sum&lt;/span&gt;[i&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;]&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;a[i]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#第二条性质可以在O（1）的时间内求出区间和&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a[l]&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;……&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;a[r]&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0086b3&#34;&gt;sum&lt;/span&gt;[r]&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0086b3&#34;&gt;sum&lt;/span&gt;[l&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;前缀和的目的就是快速求出区间之和&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-py&#34; data-lang=&#34;py&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;get_sum&lt;/span&gt;(&lt;span style=&#34;color:#0086b3&#34;&gt;sum&lt;/span&gt;,l,r):&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;if&lt;/span&gt; l&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color:#099&#34;&gt;0&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#0086b3&#34;&gt;sum&lt;/span&gt;[r]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;else&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#0086b3&#34;&gt;sum&lt;/span&gt;[r]&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#0086b3&#34;&gt;sum&lt;/span&gt;[l&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>组合数学</title>
+      <link>https://one-ruri.github.io/posts/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Mon, 11 Mar 2024 21:23:37 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</guid>
+      <description>&lt;h2 id=&#34;组合数学&#34;&gt;组合数学&lt;/h2&gt;&#xA;&lt;h2 id=&#34;计数原理加法原理&#34;&gt;计数原理：加法原理&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;加法原理： 集合 $S$ 被分成两两不相交的部分 $S_1, S_2, S_3, &amp;hellip;, S_m$，那么 $S$ 的对象数目等于：$|S| = |S_1| + |S_2| + |S_3| + &amp;hellip; + |S_m|$&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;例： 一个学生想学一门数学课，一门文化课，但不能同时选，现在从 $4$ 门数学课和 $4$ 门文化课中选，一共有 $4 + 4 = 8$ 种方法选一门课。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>简单数论</title>
+      <link>https://one-ruri.github.io/posts/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/</link>
+      <pubDate>Mon, 11 Mar 2024 21:21:26 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/</guid>
+      <description>&lt;h2 id=&#34;1-模运算&#34;&gt;1 模运算&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;定义：模运算为 a 除以 m 的余数，记为 a mod m，有 a mod m = a % m。&lt;/li&gt;&#xA;&lt;li&gt;模运算是大数运算中的常用操作。&lt;/li&gt;&#xA;&lt;li&gt;如果一个数太大，无法直接输出，或者不需要直接输出，可以把它取模后，缩小数值再输出。&lt;/li&gt;&#xA;&lt;li&gt;Python 虽然能直接计算大数，不用担心数据溢出，但是大数乘法太耗时，所以也常用取模来缩小数值。&lt;/li&gt;&#xA;&lt;li&gt;一个简单应用，判断奇偶：a%2=0，a 是偶数；a%2=1，a 是奇数&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;例题刷题统计-2022-年第十三届省赛lanqiaooj-题号-2098&#34;&gt;例题：刷题统计 2022 年第十三届省赛，lanqiaoOJ 题号 2098&lt;/h3&gt;&#xA;&lt;p&gt;【问题描述】 小明决定从下周一开始努力刷题准备蓝桥杯竞赛。他计划周一至周五每天做 a 道题目，周六和周日每天做 b 道题目。请你帮小明计算，按照计划他将在第几天实现做题数大于等于 n 题？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>图论入门</title>
+      <link>https://one-ruri.github.io/posts/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 11 Mar 2024 21:13:17 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/</guid>
+      <description>&lt;h2 id=&#34;图论&#34;&gt;图论&lt;/h2&gt;&#xA;&lt;p&gt;本章节为图论最基本的内容，要求每位同学都要尽量掌握。&lt;/p&gt;&#xA;&lt;h2 id=&#34;图的基本概念&#34;&gt;图的基本概念&lt;/h2&gt;&#xA;&lt;p&gt;图：由点(&lt;code&gt;node&lt;/code&gt;，或者 &lt;code&gt;vertex&lt;/code&gt;)和连接点的边(&lt;code&gt;edge&lt;/code&gt;)组成。图是点和边构成的网。&lt;/p&gt;&#xA;&lt;p&gt;树：特殊的图&lt;/p&gt;&#xA;&lt;p&gt;树，即连通无环图树的结点从根开始，层层扩展子树，是一种层次关系，这种层次关系，保证了树上不会出现环路。两点之间的路径：有且仅有一条路径。最近公共祖先。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>动态规划</title>
+      <link>https://one-ruri.github.io/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+      <pubDate>Mon, 11 Mar 2024 20:24:21 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <description>&lt;h2 id=&#34;动态规划dynamic-programming&#34;&gt;动态规划（Dynamic Programming）&lt;/h2&gt;&#xA;&lt;h2 id=&#34;实验介绍&#34;&gt;实验介绍&lt;/h2&gt;&#xA;&lt;p&gt;本节课我们进入动态规划课程的学习，动态规划是一种多阶段的决策过程最优化的问题。&lt;/p&gt;&#xA;&lt;p&gt;本课程对于算法学习非常重要，但是又比较难，我们讲解分 $3$ 个章节进行动态规划问题的讲解。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>贪心算法</title>
+      <link>https://one-ruri.github.io/posts/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 11 Mar 2024 20:20:38 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/</guid>
+      <description>&lt;h2 id=&#34;贪心算法&#34;&gt;贪心算法&lt;/h2&gt;&#xA;&lt;p&gt;贪心算法（Greedy algorithm），又称贪婪算法。是一种在每一步选择中都采取在当前状态下最好或最优（即最有利）的选择，从而使得问题得到全局最优解。&lt;/p&gt;&#xA;&lt;p&gt;贪心的算法的设计就是要遵循某种规则，不断地选取当前最优解的算法设计方法。这节实验将会通过多个问题的来讲解贪心算法。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>二分算法</title>
+      <link>https://one-ruri.github.io/posts/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 11 Mar 2024 20:16:41 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/</guid>
+      <description>&lt;h2 id=&#34;二分查找算法&#34;&gt;二分查找算法&lt;/h2&gt;&#xA;&lt;h4 id=&#34;知识点&#34;&gt;知识点&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;二分查找原理讲解&lt;/li&gt;&#xA;&lt;li&gt;在单调递增序列 &lt;code&gt;a&lt;/code&gt; 中查找 &lt;code&gt;x&lt;/code&gt; 或 &lt;code&gt;x&lt;/code&gt; 的后继&lt;/li&gt;&#xA;&lt;li&gt;在单调递增序列 &lt;code&gt;a&lt;/code&gt; 中查找 &lt;code&gt;x&lt;/code&gt; 或 &lt;code&gt;x&lt;/code&gt; 的前驱&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;二分查找算法讲解&#34;&gt;二分查找算法讲解&lt;/h2&gt;&#xA;&lt;p&gt;枚举查找即顺序查找，实现原理是逐个比较数组 &lt;code&gt;a[0:n-1]&lt;/code&gt; 中的元素，直到找到元素 &lt;code&gt;x&lt;/code&gt; 或搜索整个数组后确定 &lt;code&gt;x&lt;/code&gt; 不在其中。最坏情况下需要比较 &lt;code&gt;N&lt;/code&gt; 次，时间复杂度是 &lt;code&gt;O(n)&lt;/code&gt;，属于线性阶算法。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>并查集</title>
+      <link>https://one-ruri.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
+      <pubDate>Mon, 11 Mar 2024 20:09:43 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
+      <description>&lt;h2 id=&#34;并查集&#34;&gt;并查集&lt;/h2&gt;&#xA;&lt;p&gt;并查集是我认为最巧妙优雅的一种数据结构，他主要适用于解决元素分组和不相交集合的合并和查询问题。&lt;/p&gt;&#xA;&lt;p&gt;并查集也非常简单，但是，并查集在比赛中非常常用，能够极大的降低算法复杂度得数据结构，是必须要掌握熟练的。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>差分与前缀和</title>
+      <link>https://one-ruri.github.io/posts/%E5%B7%AE%E5%88%86%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C/</link>
+      <pubDate>Mon, 11 Mar 2024 16:45:34 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E5%B7%AE%E5%88%86%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C/</guid>
+      <description>&lt;h2 id=&#34;差分与前缀和&#34;&gt;差分与前缀和&lt;/h2&gt;&#xA;&lt;p&gt;差分与前缀和是一对互逆的操作，常常用于处理区间问题，差分法是解决区间加减问题，前缀和是解决区间求和问题的常用办法。&lt;/p&gt;&#xA;&lt;h4 id=&#34;知识点&#34;&gt;知识点&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;差分算法&lt;/li&gt;&#xA;&lt;li&gt;前缀和算法&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;差分法&#34;&gt;差分法&lt;/h2&gt;&#xA;&lt;p&gt;差分法的应用主要是用于处理区间问题。当某一个数组要在很多不确定的区间，加上相同的一个数。我们如果每个都进行加法操作的话，那么复杂度 $O(nm)$ 是平方阶的，非常消耗时间。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>工具函数模板</title>
+      <link>https://one-ruri.github.io/posts/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Mon, 11 Mar 2024 16:37:11 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/</guid>
+      <description>&lt;h2 id=&#34;内置模板&#34;&gt;内置模板&lt;/h2&gt;&#xA;&lt;p&gt;我们前面讲了很多数据结构相关的知识，本节课程，我们主要讲解怎么不自己定义，而是使用我们所使用的编程语言中，已经定义好的数据结构。&lt;/p&gt;&#xA;&lt;p&gt;之前我们在栈那一节已经讲过栈的内置数据结构的使用，我们本章就不再进行讲解，我们这节课仍然采用那种方式进行讲解。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>枚举法与尺取法</title>
+      <link>https://one-ruri.github.io/posts/%E6%9E%9A%E4%B8%BE%E6%B3%95%E4%B8%8E%E5%B0%BA%E5%8F%96%E6%B3%95/</link>
+      <pubDate>Mon, 11 Mar 2024 16:00:12 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E6%9E%9A%E4%B8%BE%E6%B3%95%E4%B8%8E%E5%B0%BA%E5%8F%96%E6%B3%95/</guid>
+      <description>&lt;p&gt;在之前的课程中，我们深入讨论了打表法与模拟法的暴力解法。提到暴力，我们通常会首先想到枚举。然而，枚举实际上是一门技术，要确保能够穷尽所有可能的情况并不容易。因此，在本节课中，我们将详细介绍枚举法的技巧，以确保能够完整地列举出所有情况，不漏一种。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>搜索算法</title>
+      <link>https://one-ruri.github.io/posts/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sun, 10 Mar 2024 16:42:50 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</guid>
+      <description>&lt;h2 id=&#34;深度优先搜索&#34;&gt;深度优先搜索&lt;/h2&gt;&#xA;&lt;p&gt;Depth First Search 即 DFS，意为深度优先搜索，是所有的搜索手段之一。它是从某个状态开始，不断进行状态转移，直到不能转移后，向后回退，一直到遍历完所有的状态。&lt;/p&gt;&#xA;&lt;p&gt;本章题目难度较大，请大家仔细研读讲解和代码。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>递推法与递归法</title>
+      <link>https://one-ruri.github.io/posts/%E9%80%92%E6%8E%A8%E6%B3%95%E4%B8%8E%E9%80%92%E5%BD%92%E6%B3%95/</link>
+      <pubDate>Sun, 10 Mar 2024 16:34:00 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E9%80%92%E6%8E%A8%E6%B3%95%E4%B8%8E%E9%80%92%E5%BD%92%E6%B3%95/</guid>
+      <description>&lt;p&gt;[TOC]8a143f69d05e2054793e049e53e43fd4&lt;/p&gt;&#xA;&lt;h2 id=&#34;递推法与递归法&#34;&gt;递推法与递归法&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;递推法：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;递推法是一种在数学和其他领域广泛应用的重要方法，它在计算机科学中被用作一种关键的数值求解算法。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;知识点：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;递推算法&lt;/li&gt;&#xA;&lt;li&gt;递归算法&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;递推算法的特点&#34;&gt;递推算法的特点&lt;/h2&gt;&#xA;&lt;p&gt;递推法的核心在于找到递推关系式。这种方法可以将复杂的计算过程转化为简单的重复步骤，充分利用计算机在运行程序时的时间局部性和空间局部性。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>手算与思维题</title>
+      <link>https://one-ruri.github.io/posts/%E6%89%8B%E7%AE%97%E4%B8%8E%E6%80%9D%E7%BB%B4%E9%A2%98/</link>
+      <pubDate>Sun, 10 Mar 2024 16:02:14 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E6%89%8B%E7%AE%97%E4%B8%8E%E6%80%9D%E7%BB%B4%E9%A2%98/</guid>
+      <description>&lt;h2 id=&#34;手算与思维题&#34;&gt;手算与思维题&lt;/h2&gt;&#xA;&lt;p&gt;课程伊始，我们先要讲一下蓝桥杯相关的注意事项。&lt;/p&gt;&#xA;&lt;h2 id=&#34;比赛流程&#34;&gt;比赛流程&lt;/h2&gt;&#xA;&lt;h3 id=&#34;赛程&#34;&gt;赛程：&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;省赛&lt;/li&gt;&#xA;&lt;li&gt;决赛&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;省赛一等奖参加决赛&lt;/p&gt;&#xA;&lt;p&gt;比赛时长 $4$ 小时&lt;/p&gt;&#xA;&lt;h3 id=&#34;竞赛形式&#34;&gt;竞赛形式：&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;个人赛，一人一机，全程机考&lt;/li&gt;&#xA;&lt;li&gt;答题过程中无法访问互联网&lt;/li&gt;&#xA;&lt;li&gt;不允许携带任何电子、纸质资料&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;参赛选手机器环境&#34;&gt;参赛选手机器环境&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;X86 兼容机器，内存不小于 1G，硬盘不小于 60G 操作系统：Windows7、Windows8 或 Windows10。&lt;/li&gt;&#xA;&lt;li&gt;C/C++ 开发环境：Dev-cpp 5.4.0 C/C++ API 帮助文档&lt;/li&gt;&#xA;&lt;li&gt;Java 开发环境：JDK 1.8 Eclipse-java-2020-06 API 帮助文档&lt;/li&gt;&#xA;&lt;li&gt;Python 环境：Python 3.8.6 IDLE（Python 自带编辑器）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;题型&#34;&gt;题型&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;结果填空 把答案直接通过网页提交，不要书写多余的内容。填空题每题 $5$ 分。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

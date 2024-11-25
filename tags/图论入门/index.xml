@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图论入门 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/</link>
+    <description>Recent content in 图论入门 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 11 Mar 2024 21:13:17 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>图论入门</title>
+      <link>https://one-ruri.github.io/posts/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 11 Mar 2024 21:13:17 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/</guid>
+      <description>&lt;h2 id=&#34;图论&#34;&gt;图论&lt;/h2&gt;&#xA;&lt;p&gt;本章节为图论最基本的内容，要求每位同学都要尽量掌握。&lt;/p&gt;&#xA;&lt;h2 id=&#34;图的基本概念&#34;&gt;图的基本概念&lt;/h2&gt;&#xA;&lt;p&gt;图：由点(&lt;code&gt;node&lt;/code&gt;，或者 &lt;code&gt;vertex&lt;/code&gt;)和连接点的边(&lt;code&gt;edge&lt;/code&gt;)组成。图是点和边构成的网。&lt;/p&gt;&#xA;&lt;p&gt;树：特殊的图&lt;/p&gt;&#xA;&lt;p&gt;树，即连通无环图树的结点从根开始，层层扩展子树，是一种层次关系，这种层次关系，保证了树上不会出现环路。两点之间的路径：有且仅有一条路径。最近公共祖先。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

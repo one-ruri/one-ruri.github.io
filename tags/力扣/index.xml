@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>力扣 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E5%8A%9B%E6%89%A3/</link>
+    <description>Recent content in 力扣 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 30 Mar 2024 09:55:35 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E5%8A%9B%E6%89%A3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>力扣59. 螺旋矩阵 II</title>
+      <link>https://one-ruri.github.io/posts/%E5%8A%9B%E6%89%A359-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5-ii/</link>
+      <pubDate>Sat, 30 Mar 2024 09:55:35 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E5%8A%9B%E6%89%A359-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5-ii/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.cn/problems/spiral-matrix-ii/&#34;&gt;59. 螺旋矩阵 II&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;题目要求&#34;&gt;题目要求&lt;/h2&gt;&#xA;&lt;p&gt;给你一个正整数 &lt;code&gt;n&lt;/code&gt; ，生成一个包含 &lt;code&gt;1&lt;/code&gt; 到 &lt;code&gt;n2&lt;/code&gt; 所有元素，且元素按顺时针顺序螺旋排列的 &lt;code&gt;n x n&lt;/code&gt; 正方形矩阵 &lt;code&gt;matrix&lt;/code&gt; 。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./../imgs/%E5%8A%9B%E6%89%A359-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5-II/spiraln.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;输入：n = 3&#xA;输出：[[1,2,3],[8,9,4],[7,6,5]]&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>力扣704. 二分查找</title>
+      <link>https://one-ruri.github.io/posts/%E5%8A%9B%E6%89%A3704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</link>
+      <pubDate>Sat, 30 Mar 2024 09:34:21 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E5%8A%9B%E6%89%A3704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.cn/problems/binary-search/description/&#34;&gt;704. 二分查找 - 力扣（LeetCode）&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;题目要求&#34;&gt;题目要求&lt;/h2&gt;&#xA;&lt;p&gt;给定一个 &lt;code&gt;n&lt;/code&gt; 个元素有序的（升序）整型数组 &lt;code&gt;nums&lt;/code&gt; 和一个目标值 &lt;code&gt;target&lt;/code&gt; ，写一个函数搜索 &lt;code&gt;nums&lt;/code&gt; 中的 &lt;code&gt;target&lt;/code&gt;，如果目标值存在返回下标，否则返回 &lt;code&gt;-1&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

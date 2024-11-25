@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>自动化测试 on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 自动化测试 on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 29 Jul 2024 11:49:11 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一篇文章学完自动化测试</title>
+      <link>https://one-ruri.github.io/posts/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%AD%A6%E5%AE%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 29 Jul 2024 11:49:11 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%AD%A6%E5%AE%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Walkssi</title>
+    <link>https://one-ruri.github.io/categories/</link>
+    <description>Recent content in Categories on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Nov 2024 08:18:12 +0800</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typora</title>
+      <link>https://one-ruri.github.io/categories/typora/</link>
+      <pubDate>Wed, 31 Jul 2024 00:54:51 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/typora/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>接口测试</title>
+      <link>https://one-ruri.github.io/categories/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 29 Jul 2024 11:49:47 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>自动化测试</title>
+      <link>https://one-ruri.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 29 Jul 2024 11:49:11 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>蓝桥云课</title>
+      <link>https://one-ruri.github.io/categories/%E8%93%9D%E6%A1%A5%E4%BA%91%E8%AF%BE/</link>
+      <pubDate>Mon, 29 Jul 2024 11:46:59 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/%E8%93%9D%E6%A1%A5%E4%BA%91%E8%AF%BE/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LeetCode</title>
+      <link>https://one-ruri.github.io/categories/leetcode/</link>
+      <pubDate>Mon, 29 Jul 2024 11:46:40 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/leetcode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>码蹄集</title>
+      <link>https://one-ruri.github.io/categories/%E7%A0%81%E8%B9%84%E9%9B%86/</link>
+      <pubDate>Mon, 29 Jul 2024 11:46:28 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/%E7%A0%81%E8%B9%84%E9%9B%86/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python Django</title>
+      <link>https://one-ruri.github.io/categories/python-django/</link>
+      <pubDate>Sun, 28 Jul 2024 19:01:53 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/python-django/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python PyQT</title>
+      <link>https://one-ruri.github.io/categories/python-pyqt/</link>
+      <pubDate>Wed, 17 Jul 2024 00:04:11 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/python-pyqt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python Flask</title>
+      <link>https://one-ruri.github.io/categories/python-flask/</link>
+      <pubDate>Tue, 16 Jul 2024 18:43:18 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/python-flask/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python爬虫</title>
+      <link>https://one-ruri.github.io/categories/python%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Tue, 16 Jul 2024 15:44:56 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/python%E7%88%AC%E8%99%AB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>数据结构</title>
+      <link>https://one-ruri.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Thu, 25 Apr 2024 10:46:34 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hexo</title>
+      <link>https://one-ruri.github.io/categories/hexo/</link>
+      <pubDate>Sun, 10 Mar 2024 09:49:03 +0000</pubDate>
+      <guid>https://one-ruri.github.io/categories/hexo/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

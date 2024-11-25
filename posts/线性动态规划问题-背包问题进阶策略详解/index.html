@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="线性动态规划问题&amp;背包问题进阶策略详解 - https://one-ruri.github.io/posts/%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%BF%9B%E9%98%B6%E7%AD%96%E7%95%A5%E8%AF%A6%E8%A7%A3/">
+    <meta name="author" content="Jack - https://one-ruri.github.io/">
+    
+    <meta name="msvalidate.01" content="B46311949B856F2A7015F366FB3CE878" />
+    <title>线性动态规划问题&amp;背包问题进阶策略详解</title>
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="https://one-ruri.github.io/style.min.d252ad53a5e6b2ae6b8c6c1661107189be3668e36c8dd61697bbe008595a7e04.css">
+    
+    <script type="text/javascript" src="/main.js" defer></script>
+    
+</head>
+<body class="active-animate ">
+        <div id="header"><div class="container-header">
+    <div id="vars" class="container-vars" style="display: none;">
+	{
+		"isSingleColumnOfPostList": true,
+		"hasFoldAllCodeBlocks": false,
+		"svgColor": "",
+		"en": false,
+		"dark": false
+	}
+</div>
+    <h1 class="title">
+        
+            线性动态规划问题&amp;背包问题进阶策略详解
+            
+        
+    </h1>
+
+    <div class="container-breadcrumb-nav">
+    
+    <div class="breadcrumb-nav-bar">
+        <div><a href="/"><svg t="1656411084410" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2954" width="16" height="16"><path d="M947.5 390.6l-377-290c-34.5-26.5-82.6-26.5-117.1 0l-377 290c-14 10.8-16.6 30.9-5.9 44.9 10.8 14 30.9 16.6 44.9 5.9l28.5-21.9V768c0 88.2 71.8 160 160 160h80c35.3 0 64-28.7 64-64V640c0-17.6 14.4-32 32-32h64c17.6 0 32 14.4 32 32v224c0 35.3 28.7 64 64 64h80c88.2 0 160-71.8 160-160V419.4l28.5 21.9c5.8 4.5 12.7 6.6 19.5 6.6 9.6 0 19.1-4.3 25.4-12.5 10.8-13.9 8.2-34-5.8-44.8zM816 768c0 52.9-43.1 96-96 96h-80V640c0-52.9-43.1-96-96-96h-64c-52.9 0-96 43.1-96 96v224h-80c-52.9 0-96-43.1-96-96V370.2l284.5-218.8c11.5-8.8 27.5-8.8 39 0L816 370.2V768z" fill="#6c757d" p-id="2955"></path></svg></a></div>
+        <div><a href="/nav"><svg t="1656411531924" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5827" width="16" height="16"><path d="M849.59197473 125.23018519L139.22930586 391.72854662a23.35052669 23.35052669 0 0 0-14.95414244 21.65490745c-0.12257519 9.70384955 5.61801843 18.46795771 14.40255493 22.04306141l318.42928099 129.25528056 119.51057092 320.39047893c3.06437293 8.23295069 10.35758221 13.89182751 18.7335381 14.87242563l2.7170774 0.14300521a22.79893918 22.79893918 0 0 0 21.20546682-15.36272638l259.51158924-729.54564933a23.8612558 23.8612558 0 0 0-5.31158128-24.55584682 22.3290685 22.3290685 0 0 0-23.9021142-5.43415649zM793.65694081 211.64552314l-196.63064161 552.75171747-91.91077952-246.37564122-253.62799211-102.96295445 542.16941324-203.4131218z" p-id="5828" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/search"><svg t="1656411627509" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1730" width="14" height="14"><path d="M469.333333 85.333333c211.968 0 384 172.032 384 384s-172.032 384-384 384-384-172.032-384-384 172.032-384 384-384z m0 682.666667c164.992 0 298.666667-133.674667 298.666667-298.666667 0-165.034667-133.674667-298.666667-298.666667-298.666666-165.034667 0-298.666667 133.632-298.666666 298.666666 0 164.992 133.632 298.666667 298.666666 298.666667z m362.026667 3.029333l120.704 120.661334-60.373333 60.373333-120.661334-120.704 60.330667-60.330667z" p-id="1731" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/posts"><svg t="1656411724198" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5655" width="12" height="12"><path d="M811.705761 1024H212.294239c-93.1199 0-174.823046-87.570975-174.823046-187.387854V162.322018C37.471193 69.776145 112.604921 0 212.294239 0H596.190595l7.015883 5.93161c111.74388 95.479788 185.857116 170.741078 279.614824 266.093304 29.65805 30.040735 61.165743 62.122454 96.436499 97.393211l7.271006 7.334787v459.859234c-0.063781 99.816879-81.703145 187.387854-174.823046 187.387854zM212.294239 49.94033c-72.391155 0-124.882716 47.261538-124.882716 112.381688v674.290128c0 71.94469 59.507443 137.383743 124.882716 137.383743h599.411522c65.311492 0 124.882716-65.439053 124.882716-137.383743V397.417876c-32.528184-32.464404-61.73977-62.250016-89.356836-90.377328-90.951355-92.418312-163.278729-165.957521-269.601245-257.163999H212.294239z" fill="#6c757d" p-id="5656"></path><path d="M936.588477 449.526752h-212.326129c-99.753099 0-187.324073-81.703145-187.324073-174.823046V49.94033a25.002055 25.002055 0 0 1 49.94033 0v224.763376c0 65.311492 65.502834 124.882716 137.383743 124.882716h212.326129a25.002055 25.002055 0 1 1 0 49.94033z" fill="#6c757d" p-id="5657"></path></svg></a></div>
+        <div><a href="/archive"><svg t="1656411795742" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7334" width="12" height="12"><path d="M884.224 522.24H504.32V141.824c0-16.896-13.824-30.72-30.72-30.72-120.32 0-233.472 47.616-317.952 134.144S26.112 445.952 29.184 566.784c2.56 114.688 49.152 222.72 131.072 304.128 81.92 81.408 189.952 128 304.64 130.56h10.24c117.76 0 227.84-45.568 312.32-128.512 86.528-85.504 133.632-199.68 132.608-321.024-0.512-2.048-1.536-29.696-35.84-29.696z m-140.288 307.712c-74.752 73.728-173.056 112.64-277.504 110.592-205.824-4.608-370.688-169.472-375.296-374.784-3.072-104.448 35.84-202.752 108.544-277.504 65.536-67.072 151.552-107.52 243.712-114.688v378.88c0 16.896 13.824 30.72 30.72 30.72 129.024 0 311.296 0 382.976 0.512-6.144 93.184-46.08 179.712-113.152 246.272z" fill="#6c757d" p-id="7335"></path><path d="M603.136 11.264c-8.192-0.512-15.872 3.072-22.016 8.704-5.632 5.632-9.216 13.824-9.216 22.016v378.88c0 16.896 13.824 30.72 30.72 30.72h378.88c16.896 0 30.72-13.824 30.72-30.72 0-223.744-183.808-407.552-409.088-409.6z m30.208 378.88V74.24c167.424 16.384 301.056 150.016 315.904 315.904h-315.904z" fill="#6c757d" p-id="7336"></path></svg></a></div>
+        <div id="light-dark" style="cursor: pointer;"><a><svg t="1656411842215" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5086" width="12" height="12"><path d="M1007.492874 384.513055c-8.795694-34.58307-21.189627-67.666874-36.682043-99.05151-2.698679-5.397358-10.894667-3.498287-10.894666 2.598728v0.299853c0 32.484098-6.896624 63.868734-19.890263 92.554691-10.694764 23.488501-25.487523 45.077933-43.978471 64.068635-41.779547 42.679107-99.05151 66.967217-158.722299 67.26707-61.869712 0.299853-119.941284-24.188159-162.920244-68.966238-40.280281-41.979449-62.56937-98.251902-62.269516-156.323473 0.399804-59.270984 23.588452-114.94373 65.567901-156.823229 19.59041-19.59041 42.179351-35.082826 66.667364-46.077443C672.956643 71.166451 704.041426 64.469729 736.125719 64.469729h1.299364c6.097015 0 8.096037-8.096037 2.598728-10.794715C708.739126 37.982696 675.655322 25.488812 641.172203 16.493216 599.492607 5.598549 555.714038-0.098662 510.536154 0.001289 222.37722 0.700947-7.41029 237.38508 0.185992 525.444064c7.096526 271.667008 225.889418 490.559851 497.456474 497.856279 287.559228 7.796183 524.14341-220.891864 525.842579-508.551044 0.299853-44.977981-5.297407-88.656599-15.992171-130.236244z m-83.15929 301.552378c-22.588942 53.27392-54.873137 101.250434-95.953027 142.330323-41.179841 41.179841-89.056403 73.464036-142.330324 95.953027-55.172991 23.288599-113.744317 35.182777-174.314666 35.182777s-119.141675-11.794226-174.314666-35.182777c-53.27392-22.588942-101.250434-54.873137-142.330323-95.953027-41.179841-41.179841-73.464036-89.056403-95.953027-142.330323C75.749001 630.892442 63.954774 572.221164 63.954774 511.750767s11.794226-119.141675 35.182777-174.314666c22.588942-53.27392 54.873137-101.250434 95.953027-142.330323 41.179841-41.179841 89.056403-73.464036 142.330323-95.953027C392.593892 75.7642 451.26517 63.969974 511.735567 63.969974c13.99315 0 27.886348 0.599706 41.679596 1.89907C489.246577 118.643209 448.266638 198.704016 448.266638 288.360126c0 159.022152 128.836929 287.859081 287.859081 287.859081 89.156354 0 168.817357-40.580134 221.691473-104.149015 1.099462 13.09359 1.699168 26.387082 1.699168 39.680575 0 60.470397-11.794226 119.141675-35.182776 174.314666z" p-id="5087" fill="#6c757d"></path></svg></a></div>
+        
+    </div>
+
+    
+</div>
+
+            <div id="toc">📜</div>
+        
+    
+    
+</div>
+</div>
+        <div id="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-main 
+     container-page 
+">
+
+    <div class="desc">
+        
+        <span>
+            
+            <svg t="1656736000388" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7409" width="12" height="12"><path d="M524.885333 338.986667L200.362667 663.466667c-17.28 15.274667-27.989333 36.693333-29.696 56.234666v133.76l130.730666 0.085334c22.784-1.621333 43.989333-12.245333 61.013334-31.701334l322.688-322.645333-160.213334-160.213333z m60.373334-60.330667l160.170666 160.213333 102.144-102.144a19.712 19.712 0 0 0 0-27.861333L715.093333 176.426667a19.456 19.456 0 0 0-27.605333 0L585.258667 278.613333zM701.312 85.333333c27.946667 0 54.741333 11.136 74.282667 30.848l132.309333 132.309334a105.045333 105.045333 0 0 1 0 148.565333L424.874667 879.957333c-29.824 34.346667-72.106667 55.466667-120.448 58.794667H85.333333v-42.666667l0.128-179.84c3.626667-44.970667 24.576-86.826667 56.448-114.944l485.12-485.034666A104.789333 104.789333 0 0 1 701.269333 85.333333z" p-id="7410" fill="#adb5bd"></path></svg>
+            2024-05-06&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737270708" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23838" width="11" height="11"><path d="M824.264 95.36c0-23.859 25.043-44.16 48.902-44.16s49.714 20.301 49.714 44.16v190.08c0 23.859-19.054 52.868-42.913 52.868h-190.08c-23.859 0-46.696-25.96-46.696-49.819s22.55-46.249 46.409-46.249h82.025C702.344 175.534 610.22 155.853 512 155.853c-206.775 0-360.398 149.372-360.398 356.147 0 206.775 153.623 358.23 360.398 358.23 206.775 0 357.467-151.455 357.467-358.23 0-23.859 23.634-50.706 53.413-50.706 29.78 0 49.92 26.847 49.92 50.706 0 254.493-206.307 460.8-460.8 460.8-254.493 0-460.8-206.307-460.8-460.8C51.2 257.507 257.507 51.2 512 51.2c122.4 0 226.684 33.296 312.264 117.369 0.358 0.351 0.358-24.052 0-73.209z" p-id="23839" fill="#adb5bd"></path></svg>
+            2024-05-06&nbsp;&nbsp;&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
+            6732 字</span>&nbsp;
+        <span>
+            
+            <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
+            14 分钟</span>
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div>
+        
+    </div>
+    
+    <div class="toc">
+        
+        <div class="page-operation">
+            <div><a href="#"><img src="/imgs/icons/arrow-up-circle.svg" alt=""></a></div>
+            <div><a href="https://one-ruri.github.io/posts/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%85%B8%E5%9E%8B%E9%A2%98%E5%9E%8B%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90/"><img src="/imgs/icons/arrow-left-circle.svg" alt=""></a></div>
+            <div><a href="https://one-ruri.github.io/posts/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E7%AC%AC2%E7%89%88%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><img src="/imgs/icons/arrow-right-circle.svg" alt=""></a></div>
+        </div>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-dp-概述">1. DP 概述</a></li>
+    <li><a href="#2-主要思想以及条件">2. 主要思想以及条件</a>
+      <ul>
+        <li><a href="#21-条件">2.1 条件</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-关于比赛中的状态设计">3. 关于比赛中的状态设计</a></li>
+    <li><a href="#4-线性dp">4. 线性DP</a>
+      <ul>
+        <li><a href="#41-蓝桥云课-青蛙吃虫httpswwwlanqiaocnproblems3601learning">4.1 <a href="https://www.lanqiao.cn/problems/3601/learning/?">蓝桥云课-青蛙吃虫</a></a></li>
+        <li><a href="#42-蓝桥算法赛-奇怪的段httpswwwlanqiaocnproblems12112learning">4.2 <a href="https://www.lanqiao.cn/problems/12112/learning/">蓝桥算法赛-奇怪的段</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#5-背包">5. 背包</a>
+      <ul>
+        <li><a href="#51-01-背包">5.1 0/1 背包</a></li>
+        <li><a href="#52-完全背包">5.2 完全背包</a></li>
+        <li><a href="#53-多重背包">5.3 多重背包</a></li>
+        <li><a href="#54-分组背包">5.4 分组背包</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-依赖背包">6. 依赖背包</a></li>
+    <li><a href="#7-作业">7. 作业</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div class='content  content '>
+        <h2 id="1-dp-概述">1. DP 概述</h2>
+<p>DP（dynamic Progamming），动态规划算法，是一类常见、常考的算法。</p>
+<p>在算法竞赛中，DP的考法多而杂，并且难度可以从简单到超难，主要难在状态的设计，以及思考如何转移；但是在蓝桥杯比赛中，涉及到的往往都是简单，基础的DP考点，十分考验基本功。</p>
+<p>动态规划是一种通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。</p>
+<p>由于动态规划并不是某种具体的算法，而是一种解决特定问题的方法，因此它会出现在各式各样的数据结构中，与之相关的题目种类也更为繁杂。</p>
+<p>在算法类竞赛中，计数等非最优化问题的递推解法也常被不规范地称作 DP。</p>
+<h2 id="2-主要思想以及条件">2. 主要思想以及条件</h2>
+<p>DP 将原问题划分划分为若干个重叠的子问题，并且逐层递进，每个子问题在求解的过程中，都会被抽象为“阶段”，也叫做“状态”，在完成前一个阶段的计算后，才能进行下一阶段的计算。</p>
+<p>最广泛运用的例子就是数字三角形问题：</p>
+<p>给定一个三角形，第 $i$ 行有 $i$ 个元素，如下图：</p>
+<p>​       <span> 5 </span>
+​     <span> 5 </span> <span> 4 </span>
+<span> 8 </span> <span> 9 </span> <span> 0 </span></p>
+<p>你初始在第一行的第一个元素位置，每一次，可以选择左下，或者右下的位置进行移动，每次移动到一个位置上，可以获得相应的分数。问：你可以任意规划自己的路线，请问在走到最后一行时，能够获得的最大分数是多少？</p>
+<p>同学们可以自行计算一下，当然，很多同学可以一眼看出来，答案是 $5 + 5 + 9 = 19$。从第一行开始，往左边，然后往右边。</p>
+<p>如果利用动态规划的思想，应该如下考虑：</p>
+<p>而对于每一个点，它的下一步决策只有两种：往左下角或者往右下角（如果存在）。因此只需要记录当前点的最大权值，用这个最大权值执行下一步决策，来更新后续点的最大权值。<strong>即，对于每一个点，当作一种状态，代表的意义是：到达当前点能累积的最大分数。</strong></p>
+<p>如果你理解了这一步，并且认为其设计的十分有道理，那么我们来剖析一下其中原理：</p>
+<h3 id="21-条件">2.1 条件</h3>
+<p>能用动态规划解决的问题，需要满足三个条件：最优子结构，无后效性和子问题重叠。</p>
+<ol>
+<li>无后效性</li>
+</ol>
+<p>已经求解的子问题，不会再受到后续决策的影响，即后续状态不会影响前序状态，也说明了求解的有序性。</p>
+<ol start="2">
+<li>子问题重叠</li>
+</ol>
+<p>子问题 A 和子问题 B 可能存在共同的子问题 C，那么我们可以将一些重叠的子问题存储下来，特别来说，重叠的越多，我们的空间利用率越高。</p>
+<ol start="3">
+<li>最优子结构</li>
+</ol>
+<p>当前问题的最优解一定可以由子问题的最优解导出。</p>
+<p>再抽象一点，其实大部分的 DP 问题，都可以抽象为数字三角形问题，结构图如下：</p>
+<p><img src="./../images/%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%BF%9B%E9%98%B6%E7%AD%96%E7%95%A5%E8%AF%A6%E8%A7%A3/uid1792586-20240417-1713337518314.png" alt="图片描述"></p>
+<p>箭头源代表子问题，箭头指向，代表后续问题。</p>
+<p>例如：$\lbrace 1 \rbrace$ 同时是 $\lbrace 2,3 \rbrace$ 的子问题，并且 $2$ 问题的解可以由 $1$ 导出。</p>
+<p>总结：<strong>动态规划对状态的遍历，构成了一张有向无环图，遍历顺序（或者求解顺序）应该是该图的一个拓扑序</strong>。</p>
+<h2 id="3-关于比赛中的状态设计">3. 关于比赛中的状态设计</h2>
+<p>DP 的难点在于状态的设计和子结构的发掘，即使学界讨论了诸多DP转移的状态设计和优化手段，但是如何把问题形式化为状态空间，往往是一件考察智力而非套路的事情。</p>
+<p>但是在蓝桥杯的赛题中，考察的是选手的基本功，与一点点的拔高，所以不会太难，可以遵循某些套路。</p>
+<p>笔者按照经验，先讲授一些自己常用的状态设计思路，然后结合例题讲解。</p>
+<p>设计一个状态分为如下几步：</p>
+<ol>
+<li>尝试找到题目中的需要优化的值，例如最小值，最大值，次数等，做为目标，也是就是状态的最优值。</li>
+<li>尝试找到题目中的条件，例如长度，区间数量等，做为状态设计。</li>
+<li>尝试模拟题目中的求解步骤，这往往是题目中的条件，例如对某个数加一，或者在占领某些土地。作为转移的部分。</li>
+<li>尝试结合将 1，2，3 结合起来，看能否找到一个合理的最优结构，并且无后向性。</li>
+<li>如果不是最优，尝试这加大状态的条件，例如在补上一个必要的量，在进行3步骤。</li>
+</ol>
+<p>笔者还有一些习惯，例如在看到某个题目时，如果准备尝试用DP解题，就是按照题目中的量进行一个简单尝试。例如，题目中有三个量，就会尝试写出 $dp_{i,j,k}$ ，然后尝试读出其代表的实际意义。如果可行，就进行优化或者细化。</p>
+<p>一般而言，常见的线性DP，都能用此种方法解决，对于较难的问题，往往很难一下子设计出一个较好的状态，这就需要大量的经验以及一些天赋。</p>
+<p>例如，你可以尝试设计这两个问题的状态：</p>
+<ol>
+<li>
+<p><a href="https://www.lanqiao.cn/problems/3601/learning/?">蓝桥云课-青蛙吃虫</a></p>
+</li>
+<li>
+<p><a href="https://www.lanqiao.cn/problems/17004/learning/">蓝桥算法赛-食堂</a></p>
+</li>
+</ol>
+<p>可以很明显的感觉出设计的难点。</p>
+<h2 id="4-线性dp">4. 线性DP</h2>
+<p>本部分将结合一些题，来不断的重复上述建立 DP 状态的方法，意图帮助读者强化一些简单的DP状态设计。</p>
+<h3 id="41-蓝桥云课-青蛙吃虫httpswwwlanqiaocnproblems3601learning">4.1 <a href="https://www.lanqiao.cn/problems/3601/learning/?">蓝桥云课-青蛙吃虫</a></h3>
+<p><img src="./../images/%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%BF%9B%E9%98%B6%E7%AD%96%E7%95%A5%E8%AF%A6%E8%A7%A3/uid1792586-20240417-1713337799031.png" alt="图片描述"></p>
+<ol>
+<li>找到题目中的需要优化的值，“最多吃多少昆虫”，完美符合要求，我们将这个最大值作为状态的最优值，也就是说，如果我们设计了一个状态 $s$，那么我们的 $dp_s$ 所代表的意义大概率在 $s$ 情况下的吃虫的最大虫数。</li>
+<li>尝试找到题目中的条件，路径长度为 $N$，最多跳 $K$ 次。</li>
+<li>尝试模拟题目中的求解步骤，这往往是题目中的条件。每次跳 $T$ 格，但是满足 $A \le T \le B$，可以看作跳一次，就是一次转移。</li>
+</ol>
+<p>尝试结合将 1，2，3 结合起来，看能否找到一个合理的最优结构，并且无后向性。</p>
+<blockquote>
+<p>得到的状态以及转移如下：</p>
+<p>定义 $dp_{i,j}$ 为跳跃了 $i$ 次后，当前处在 $j$ 位置能吃到的最大昆虫数量。</p>
+<p>那么由定义得到 $dp_{0,0} = 0$，这是初始状态，代表的意义是在未跳跃前的状态，很明显符合定义（初始状态的定义，往往是需要对应于真实情况）。</p>
+<p>我们思考如何转移，由于转移的过程为题目中的求解条件：每次跳跃一些格子，那么跳跃就是转移的过程。</p>
+<p>我们思路如何得到 $dp_{i,j}$ ，复习定义：跳跃了 $i$ 次后，当前处在 $j$ 位置能吃到的最大昆虫数量。</p>
+<p>那么这个状态的前一个状态是什么，也是就说，他的子问题是什么，根据实际情况，我们可以得到上一个状态一定是 $dp_{i-1,j&rsquo;}$，定义为 跳跃了 $i-1$ 次后，到达位置为 $j&rsquo;$ 的位置，如果满足跳一次可以到达 $j$，那么必须满足 $A \le j-j&rsquo; \le B$。</p>
+</blockquote>
+<p>有了这个过程，那么我们实际上就得到了转移的逻辑，你完全可以根据这个思路写出代码核心：</p>
+<ul>
+<li>C++</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>memset(dp, <span style="color:#000;font-weight:bold">-</span><span style="color:#099">0x3f3f3f3f</span>, <span style="color:#000;font-weight:bold">sizeof</span>(dp)); <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>; i <span style="color:#000;font-weight:bold">&lt;=</span> K; <span style="color:#000;font-weight:bold">++</span>i) { <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> j <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>; j <span style="color:#000;font-weight:bold">&lt;=</span> n; <span style="color:#000;font-weight:bold">++</span>j) { <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> k <span style="color:#000;font-weight:bold">=</span> A; k <span style="color:#000;font-weight:bold">&lt;=</span> B; <span style="color:#000;font-weight:bold">++</span>k) { <span style="color:#000;font-weight:bold">if</span> (j <span style="color:#000;font-weight:bold">-</span> k <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">0</span>) <span style="color:#000;font-weight:bold">continue</span>; dp[i][j] <span style="color:#000;font-weight:bold">=</span> max(dp[i][j], dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>][j <span style="color:#000;font-weight:bold">-</span> k] <span style="color:#000;font-weight:bold">+</span> a[j]); } ans <span style="color:#000;font-weight:bold">=</span> max(ans, dp[i][j]); } } cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> ans <span style="color:#000;font-weight:bold">&lt;&lt;</span> endl;
+</span></span></code></pre></div><ul>
+<li>Java</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">[]</span><span style="color:#bbb"> </span>row<span style="color:#bbb"> </span>:<span style="color:#bbb"> </span>dp)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>0;<span style="color:#bbb"> </span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#bbb"> </span>row.<span style="color:#008080">length</span>;<span style="color:#bbb"> </span>j<span style="color:#000;font-weight:bold">++</span>)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>row<span style="color:#000;font-weight:bold">[</span>j<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-</span>0x3f3f3f3f;<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>0<span style="color:#000;font-weight:bold">][</span>0<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>0;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;=</span><span style="color:#bbb"> </span>K;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">++</span>i)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb"> </span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;=</span><span style="color:#bbb"> </span>n;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">++</span>j)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>k<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>A;<span style="color:#bbb"> </span>k<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;=</span><span style="color:#bbb"> </span>B;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">++</span>k)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>(j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-</span><span style="color:#bbb"> </span>k<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#bbb"> </span>0)<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">continue</span>;<span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>i<span style="color:#000;font-weight:bold">][</span>j<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>Math.<span style="color:#008080">max</span>(dp<span style="color:#000;font-weight:bold">[</span>i<span style="color:#000;font-weight:bold">][</span>j<span style="color:#000;font-weight:bold">]</span>,<span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-</span><span style="color:#bbb"> </span>1<span style="color:#000;font-weight:bold">][</span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-</span><span style="color:#bbb"> </span>k<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb"> </span>a<span style="color:#000;font-weight:bold">[</span>j<span style="color:#000;font-weight:bold">]</span>);<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>ans<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>Math.<span style="color:#008080">max</span>(ans,<span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>i<span style="color:#000;font-weight:bold">][</span>j<span style="color:#000;font-weight:bold">]</span>);<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>System.<span style="color:#008080">out</span>.<span style="color:#008080">println</span>(ans);<span style="color:#bbb">
+</span></span></span></code></pre></div><ul>
+<li>Python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>dp[<span style="color:#099">0</span>][<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span> <span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">1</span>, K <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>): <span style="color:#000;font-weight:bold">for</span> j <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">1</span>, n <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>): <span style="color:#000;font-weight:bold">for</span> k <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(A, B <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>): <span style="color:#000;font-weight:bold">if</span> j <span style="color:#000;font-weight:bold">-</span> k <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">0</span>: <span style="color:#000;font-weight:bold">continue</span> dp[i][j] <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">max</span>(dp[i][j], dp[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>][j <span style="color:#000;font-weight:bold">-</span> k] <span style="color:#000;font-weight:bold">+</span> a[j]) ans <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">max</span>(ans, dp[i][j]) <span style="color:#0086b3">print</span>(ans)
+</span></span></code></pre></div><p>我们可以写出更具规整的转移： $dp_{0,0} = 0 \ dp_{i,j} = \max_{A \le k \le B}(dp_{i-1,k})$ 我们要求的答案为 $\underset{0 \le i \le k, 0 \le j \le n}{\max}(dp_{i,j})$。</p>
+<h3 id="42-蓝桥算法赛-奇怪的段httpswwwlanqiaocnproblems12112learning">4.2 <a href="https://www.lanqiao.cn/problems/12112/learning/">蓝桥算法赛-奇怪的段</a></h3>
+<p><img src="./../images/%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%BF%9B%E9%98%B6%E7%AD%96%E7%95%A5%E8%AF%A6%E8%A7%A3/uid1792586-20240417-1713337554344.png" alt="图片描述"></p>
+<p>我们继续重复上述解题方法：</p>
+<ol>
+<li>
+<p>找到题目中的需要优化的值，“加权和值最大”，完美符合要求，我们将这个最大值作为状态的最优值，也就是说，如果我们设计了一个状态 $s$，那么我们的 $dp_s$ 所代表的意义大概率在 $s$ 情况下的最大加权和值。</p>
+</li>
+<li>
+<p>尝试找到题目中的条件，序列长度为 $n$，划分出 $k$ 个区间。</p>
+</li>
+<li>
+<p>尝试模拟题目中的求解步骤，这往往是题目中的条件。在本题中，划分区间就是一次转移。</p>
+</li>
+<li>
+<p>尝试结合将1，2，3结合起来，看能否找到一个合理的最优结构，并且无后向性。</p>
+</li>
+</ol>
+<p>我们可以尝试建立如下转移：</p>
+<blockquote>
+<p>定义状态 $dp_{i,j}$ 表示处理到第 $i$ 个数字，分出 $j$ 个区间的最大值。</p>
+<p>初始状态为 $dp_{0,0} = 0$。这个代表初始情况下，未划分区间的最大值，是符合实际情况，并且是符合定义的。</p>
+<p>由于一次划分就是一次转移，我们考虑 $dp_{i,j}$，他的上一次划分一定是 $dp_{i&rsquo;,j-1}$，所代表的意义是，划分 $j-1$ 段时，最后一个元素是 $i$ 的情况。</p>
+<p>那么我们的转移就是 $dp_{i,j} = dp_{i&rsquo;,j-1} + p_j \times \sum _{y=i&rsquo;+1} ^i a_y$。</p>
+<p>当然，我们要求的是最大值，所以我们需要加一个条件： $dp_{i,j} = \underset {j \le i&rsquo; \le i} {\max}  (dp_{i&rsquo;,j-1} + p_j \times \sum _{y=i&rsquo;+1} ^i a_y)$ 状态是 $n \times k$ 个，每次转移的代价是 $n$ 次，那么这个转移的复杂度为 $O(n^2 \times k)$。</p>
+<p>当然，对于这个题来说，复杂度太高了，无法通过本题，由于是算法赛，所以无法通过，<strong>如果是蓝桥大赛的题，那么大概率能得到 $50$ % 的分数。</strong> 当然需要一些优化策略，不然求和的这一部分也会增加复杂度，同学们自行思考（提示：前缀和，或者边循环边算）。</p>
+<p>如果要解决本题，我们考虑优化</p>
+<p>将式子拆开</p>
+<p><img src="./../images/%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%BF%9B%E9%98%B6%E7%AD%96%E7%95%A5%E8%AF%A6%E8%A7%A3/uid1792586-20240417-1713348601655.png" alt="图片描述"></p>
+<p>上述的理解为，将 $a_i$ 新开一个区间，还是并入旧区间。</p>
+<p>转移的复杂度为：$O(n\times k)$。</p>
+<p>实现过程中用了滚动数组，用来节约空间，当然也可以不用。</p>
+<p>滚动数组： 由于每次转移 $dp_{i,j}$ 只与 $dp_{i-1, j&rsquo;}$ 有关，对于第一维来说， $dp_i$ 只与 $dp_{i-1}$ 有关，所以，我们用两个量来表示当前的 $dp_i$ 和 $dp_{i-1}$ 即可。在代码中用 $dp_{now}$ 和 $dp_{pre}$ 表示。</p>
+</blockquote>
+<p>代码如下：</p>
+<ul>
+<li>C++</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic"> #include &lt;cstring&gt; using namespace std; const int N = 1e5+100; using ll = long long; ll dp[2][204]; int n, k; int a[N], b[204]; int main() { cin &gt;&gt; n &gt;&gt; k; for (int i = 1; i &lt;= n; ++i) cin &gt;&gt; a[i]; for (int i = 1; i &lt;= k; ++i) cin &gt;&gt; b[i]; memset(dp, -0x3f, sizeof(dp)); int now = 0, pre = 1; dp[now][0] = 0; for (int i = 1; i &lt;= n; ++i) { swap(now, pre); memset(dp[now], -0x3f, sizeof(dp[now])); for (int j = 1; j &lt;= k; ++j) { dp[now][j] = max(dp[pre][j], dp[pre][j - 1]) + 1ll * a[i] * b[j]; } } cout &lt;&lt; dp[now][k] &lt;&lt; &#39;\n&#39;; return 0; }
+</span></span></span></code></pre></div><ul>
+<li>Java</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#555">java.util.Scanner</span>;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">std</span><span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">main</span>(String<span style="color:#000;font-weight:bold">[]</span><span style="color:#bbb"> </span>args)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>Scanner<span style="color:#bbb"> </span>scanner<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>Scanner(System.<span style="color:#008080">in</span>);<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>N<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>100500;<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">long</span><span style="color:#000;font-weight:bold">[][]</span><span style="color:#bbb"> </span>dp<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">long</span><span style="color:#000;font-weight:bold">[</span>2<span style="color:#000;font-weight:bold">][</span>205<span style="color:#000;font-weight:bold">]</span>;<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>n<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>k<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">[]</span><span style="color:#bbb"> </span>a<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">[</span>N<span style="color:#000;font-weight:bold">]</span>;<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">[]</span><span style="color:#bbb"> </span>b<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">[</span>205<span style="color:#000;font-weight:bold">]</span>;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;=</span><span style="color:#bbb"> </span>n;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">++</span>i)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>a<span style="color:#000;font-weight:bold">[</span>i<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;=</span><span style="color:#bbb"> </span>k;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">++</span>i)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>b<span style="color:#000;font-weight:bold">[</span>i<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>0;<span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#bbb"> </span>205;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">++</span>i)<span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>0<span style="color:#000;font-weight:bold">][</span>i<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>1<span style="color:#000;font-weight:bold">][</span>i<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-</span>9000000000000000000L;<span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>0<span style="color:#000;font-weight:bold">][</span>0<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>0;<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>now<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>0,<span style="color:#bbb"> </span>pre<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;=</span><span style="color:#bbb"> </span>n;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">++</span>i)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>now<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">^=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb"> </span>pre<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">^=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>0;<span style="color:#bbb"> </span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#bbb"> </span>205;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">++</span>j)<span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>now<span style="color:#000;font-weight:bold">][</span>j<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-</span>9000000000000000000L;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb"> </span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;=</span><span style="color:#bbb"> </span>k;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">++</span>j)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>now<span style="color:#000;font-weight:bold">][</span>j<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>Math.<span style="color:#008080">max</span>(dp<span style="color:#000;font-weight:bold">[</span>pre<span style="color:#000;font-weight:bold">][</span>j<span style="color:#000;font-weight:bold">]</span>,<span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>pre<span style="color:#000;font-weight:bold">][</span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-</span><span style="color:#bbb"> </span>1<span style="color:#000;font-weight:bold">]</span>)<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb"> </span>1L<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*</span><span style="color:#bbb"> </span>a<span style="color:#000;font-weight:bold">[</span>i<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*</span><span style="color:#bbb"> </span>b<span style="color:#000;font-weight:bold">[</span>j<span style="color:#000;font-weight:bold">]</span>;<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>System.<span style="color:#008080">out</span>.<span style="color:#008080">println</span>(dp<span style="color:#000;font-weight:bold">[</span>now<span style="color:#000;font-weight:bold">][</span>k<span style="color:#000;font-weight:bold">]</span>);<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><ul>
+<li>Python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>N <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">100500</span> dp <span style="color:#000;font-weight:bold">=</span> [[<span style="color:#000;font-weight:bold">-</span><span style="color:#0086b3">float</span>(<span style="color:#d14">&#39;inf&#39;</span>)] <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">205</span> <span style="color:#000;font-weight:bold">for</span> _ <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">2</span>)] n, k <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split()) a <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">+</span> <span style="color:#0086b3">list</span>(<span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split())) b <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">+</span> <span style="color:#0086b3">list</span>(<span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split())) now, pre <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>, <span style="color:#099">1</span> dp[now][<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span> <span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">1</span>, n <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>): now, pre <span style="color:#000;font-weight:bold">=</span> pre, now dp[now] <span style="color:#000;font-weight:bold">=</span> [<span style="color:#000;font-weight:bold">-</span><span style="color:#0086b3">float</span>(<span style="color:#d14">&#39;inf&#39;</span>)] <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">205</span> <span style="color:#000;font-weight:bold">for</span> j <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">1</span>, k <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>): dp[now][j] <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">max</span>(dp[pre][j], dp[pre][j <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>]) <span style="color:#000;font-weight:bold">+</span> a[i] <span style="color:#000;font-weight:bold">*</span> b[j] <span style="color:#0086b3">print</span>(dp[now][k])
+</span></span></code></pre></div><h2 id="5-背包">5. 背包</h2>
+<p>背包问题是老生常谈的经典问题了。</p>
+<p>原始模型如下：</p>
+<p>有 $n$ 个物品和一个容量为 $m$ 的背包，每个物品有一个价值 $p$ 和 体积 $v$ 。问在总容量不超过 $m$ 的情况下，你能装载的最大价值和为多少？</p>
+<p>背包有多种模型：</p>
+<ol>
+<li>0/1 背包，在这种情况下，每个物品只有一个。</li>
+<li>完全背包，在这种情况下，每个物品有无穷个。</li>
+<li>多重背包，在这种情况下，每个物品有 $c_i$ 个，$c_i$ 为第 $i$ 个物品的数量。</li>
+<li>分组背包，在这种情况下，存在 $n$ 个组别，每个组别有若干个物品，但是每组至多只能选择一个。</li>
+<li>依赖背包，在这种情况下，某些物品之间存在依赖关系。</li>
+</ol>
+<p>最基础的属于 0/1 背包和完全背包。</p>
+<p>其模板代码如下：</p>
+<h3 id="51-01-背包">5.1 0/1 背包</h3>
+<ul>
+<li>C++</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// 二维数组版本 for (int i = 1; i &lt;= n; ++i) { for (int j = m; j - v[i] &gt;= 0; --j) { dp[i][j] = max(dp[i][j], dp[i - 1][j - v[i]] + p[i]); } } // ------------- 一维数组版本 for (int i = 1; i &lt;= n; ++i) { for (int j = m; j - v[i] &gt;= 0; --j) { dp[j] = max(dp[j], dp[j - v[i]] + p[i]); } } // dp[i][j] 代表处理到第 i 个物品，容量为 j 时的最大值。
+</span></span></span></code></pre></div><ul>
+<li>Java</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// 二维数组版本 for (int i = 1; i &lt;= n; ++i) { for (int j = m; j - v[i] &gt;= 0; --j) { dp[i][j] = Math.max(dp[i][j], dp[i - 1][j - v[i]] + p[i]); } } // ------------- 一维数组版本 for (int i = 1; i &lt;= n; ++i) { for (int j = m; j - v[i] &gt;= 0; --j) { dp[j] = Math.max(dp[j], dp[j - v[i]] + p[i]); } } // dp[i][j] 代表处理到第 i 个物品，容量为 j 时的最大值。</span><span style="color:#bbb">
+</span></span></span></code></pre></div><ul>
+<li>python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 二维数组版本 for i in range(1, n + 1): for j in range(m, v[i] - 1, -1): dp[i][j] = max(dp[i][j], dp[i - 1][j - v[i]] + p[i]) # ------------- 一维数组版本 for i in range(1, n + 1): for j in range(m, v[i] - 1, -1): dp[j] = max(dp[j], dp[j - v[i]] + p[i])</span>
+</span></span></code></pre></div><h3 id="52-完全背包">5.2 完全背包</h3>
+<ul>
+<li>C++</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// ------------- 一维数组版本 for (int i = 1; i &lt;= n; ++i) { for (int j = v[i]; j &lt;= m; ++j) { dp[j] = max(dp[j], dp[j - v[i]] + p[i]); } } // dp[i][j] 代表处理到第 i 个物品，容量为 j 时的最大值。
+</span></span></span></code></pre></div><ul>
+<li>Java</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// ------------- 一维数组版本 for (int i = 1; i &lt;= n; ++i) { for (int j = v[i]; j &lt;= m; ++j) { dp[j] = Math.max(dp[j], dp[j - v[i]] + p[i]); } } // dp[i][j] 代表处理到第 i 个物品，容量为 j 时的最大值。</span><span style="color:#bbb">
+</span></span></span></code></pre></div><ul>
+<li>python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">1</span>, n <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>): <span style="color:#000;font-weight:bold">for</span> j <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(v[i], m <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>): dp[j] <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">max</span>(dp[j], dp[j <span style="color:#000;font-weight:bold">-</span> v[i]] <span style="color:#000;font-weight:bold">+</span> p[i])
+</span></span></code></pre></div><h3 id="53-多重背包">5.3 多重背包</h3>
+<p>多重背包可以转化为 $0/1$ 背包。</p>
+<p>首先我们可以将每个物品的 $c_i$ 个全部拆出来，变成0/1 背包，但是这样的话复杂度就变成了 $O(m \times \sum c_i)$。</p>
+<p>还有另外一种方式，我们可以将 $c_i$ 按照进制拆分，分为 $\lbrace 1, 2, 4, 8, &hellip; \rbrace$ 个，例如，如果是 $5$ 个，每个物品的容量为 $v$，价值为 $p$，那么划分为 $\lbrace 1, 2, 2\rbrace$，将这 $5$ 个物品划分为 $3$ 个物品，第一个物品容量为 $v$，价格为 $p$，第二个物品容量为 $2v$，价格为 $2p$，第三个物品容量为 $2v$，价格为 $2p$，这样就将复杂度降低为了 $O(m \sum \log_2(c_i))$。</p>
+<blockquote>
+<p>这样的划分，可以拼凑出 $0 \sim c_i$ 所有数量的物品。因为是按照二进制划分的，假设划分的最大数量是 $2^k$，那么最后一个是 $x = c_i-2^{k+1} + 1$。</p>
+<p>我们首先可以用前 $k$ 个拼凑出 $0 \sim 2 ^{k+1} - 1$ 种情况，并且 $x \lt 2^{k+1}$，所以其他数可以先加上 $x$ ，然后再加上 $0 \sim 2^{k+1} - 1$ 中的一个，那么就可以拼凑出 $0 \sim c_i$ 所有的数量了。</p>
+</blockquote>
+<p>拆分代码：</p>
+<ul>
+<li>C++</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// index 为新的物品编号 index = 0; for (int i = 1; i &lt;= m; i++) { int cnt = 1, p, v, c; cin &gt;&gt; p &gt;&gt; v &gt;&gt; c; while (c &gt; cnt) { c -= cnt; list[++index].p = c * p; list[index].v = c * v; cnt *= 2; } list[++index].p = c * p; list[index].v = c * v; } // list 存储所有新的物品
+</span></span></span></code></pre></div><ul>
+<li>Python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span> _ <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(m): cnt <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span> p, v, c <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split()) <span style="color:#000;font-weight:bold">while</span> c <span style="color:#000;font-weight:bold">&gt;</span> cnt: c <span style="color:#000;font-weight:bold">=</span> c <span style="color:#000;font-weight:bold">-</span> cnt <span style="color:#0086b3">list</span><span style="color:#000;font-weight:bold">.</span>append((c <span style="color:#000;font-weight:bold">*</span> p, c <span style="color:#000;font-weight:bold">*</span> v)) cnt <span style="color:#000;font-weight:bold">=</span> cnt <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">2</span> <span style="color:#0086b3">list</span><span style="color:#000;font-weight:bold">.</span>append((c <span style="color:#000;font-weight:bold">*</span> p, c <span style="color:#000;font-weight:bold">*</span> v))
+</span></span></code></pre></div><ul>
+<li>Java</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Scanner<span style="color:#bbb"> </span>scanner<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>Scanner(System.<span style="color:#008080">in</span>);<span style="color:#bbb"> </span>p<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span>v<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">while</span><span style="color:#bbb"> </span>(c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>cnt)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-=</span><span style="color:#bbb"> </span>cnt;<span style="color:#bbb"> </span>index<span style="color:#000;font-weight:bold">++</span>;<span style="color:#bbb"> </span>list<span style="color:#000;font-weight:bold">[</span>index<span style="color:#000;font-weight:bold">]</span>.<span style="color:#008080">p</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*</span><span style="color:#bbb"> </span>p;<span style="color:#bbb"> </span>list<span style="color:#000;font-weight:bold">[</span>index<span style="color:#000;font-weight:bold">]</span>.<span style="color:#008080">v</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*</span><span style="color:#bbb"> </span>v;<span style="color:#bbb"> </span>cnt<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*=</span><span style="color:#bbb"> </span>2;<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>index<span style="color:#000;font-weight:bold">++</span>;<span style="color:#bbb"> </span>list<span style="color:#000;font-weight:bold">[</span>index<span style="color:#000;font-weight:bold">]</span>.<span style="color:#008080">p</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*</span><span style="color:#bbb"> </span>p;<span style="color:#bbb"> </span>list<span style="color:#000;font-weight:bold">[</span>index<span style="color:#000;font-weight:bold">]</span>.<span style="color:#008080">v</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*</span><span style="color:#bbb"> </span>v;<span style="color:#bbb">
+</span></span></span></code></pre></div><h4 id="531-小明的背包4httpswwwlanqiaocnproblems1177learning">5.3.1 <a href="https://www.lanqiao.cn/problems/1177/learning/">小明的背包4</a></h4>
+<p><img src="./../images/%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%BF%9B%E9%98%B6%E7%AD%96%E7%95%A5%E8%AF%A6%E8%A7%A3/uid1792586-20240417-1713349006255.png" alt="图片描述"></p>
+<p>算是一个多重背包模板题，套用上述模板解题即可。</p>
+<p>当然，本题中存在无限的数量，可以有两种考虑方法，对于无穷数量，我们定义会满载的数量，例如 $\frac{V}{w_i}$；或者在分完多重背包后，在进行完全背包。</p>
+<p>都可以，推荐同学们两种都试试。</p>
+<ul>
+<li>C++</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic"> using namespace std; int idx = 0; int w[40003], v[40003]; int N, V; int dp[2003]; int main() { cin &gt;&gt; N &gt;&gt; V; int ww, vv, c; while (N --) { cin &gt;&gt; ww &gt;&gt; vv &gt;&gt; c; if (c == 0) c = V / ww; int cnt = 1; while (c &gt; cnt) { idx ++; c -= cnt; w[idx] = cnt * ww; v[idx] = cnt * vv; cnt *= 2; } idx ++; w[idx] = c * ww; v[idx] = c * vv; } for (int i = 1; i &lt;= idx; ++i) { for (int j = V; j - w[i] &gt;= 0; --j) { dp[j] = max(dp[j], dp[j - w[i]] + v[i]); } } cout &lt;&lt; dp[V] &lt;&lt; endl; return 0; }
+</span></span></span></code></pre></div><ul>
+<li>Java</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#555">java.util.Scanner</span>;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">std</span><span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">main</span>(String<span style="color:#000;font-weight:bold">[]</span><span style="color:#bbb"> </span>args)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>Scanner<span style="color:#bbb"> </span>scanner<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>Scanner(System.<span style="color:#008080">in</span>);<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>idx<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>0;<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">[]</span><span style="color:#bbb"> </span>w<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">[</span>40003<span style="color:#000;font-weight:bold">]</span>;<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">[]</span><span style="color:#bbb"> </span>v<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">[</span>40003<span style="color:#000;font-weight:bold">]</span>;<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>N<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>V<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">[]</span><span style="color:#bbb"> </span>dp<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">[</span>2003<span style="color:#000;font-weight:bold">]</span>;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">while</span><span style="color:#bbb"> </span>(N<span style="color:#000;font-weight:bold">--</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>0)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>ww<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>vv<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>scanner.<span style="color:#008080">nextInt</span>();<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>(c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">==</span><span style="color:#bbb"> </span>0)<span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>V<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">/</span><span style="color:#bbb"> </span>ww;<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>cnt<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">while</span><span style="color:#bbb"> </span>(c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>cnt)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>idx<span style="color:#000;font-weight:bold">++</span>;<span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-=</span><span style="color:#bbb"> </span>cnt;<span style="color:#bbb"> </span>w<span style="color:#000;font-weight:bold">[</span>idx<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>cnt<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*</span><span style="color:#bbb"> </span>ww;<span style="color:#bbb"> </span>v<span style="color:#000;font-weight:bold">[</span>idx<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>cnt<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*</span><span style="color:#bbb"> </span>vv;<span style="color:#bbb"> </span>cnt<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*=</span><span style="color:#bbb"> </span>2;<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>idx<span style="color:#000;font-weight:bold">++</span>;<span style="color:#bbb"> </span>w<span style="color:#000;font-weight:bold">[</span>idx<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*</span><span style="color:#bbb"> </span>ww;<span style="color:#bbb"> </span>v<span style="color:#000;font-weight:bold">[</span>idx<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">*</span><span style="color:#bbb"> </span>vv;<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&lt;=</span><span style="color:#bbb"> </span>idx;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">++</span>i)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>V;<span style="color:#bbb"> </span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-</span><span style="color:#bbb"> </span>w<span style="color:#000;font-weight:bold">[</span>i<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">&gt;=</span><span style="color:#bbb"> </span>0;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">--</span>j)<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>j<span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>Math.<span style="color:#008080">max</span>(dp<span style="color:#000;font-weight:bold">[</span>j<span style="color:#000;font-weight:bold">]</span>,<span style="color:#bbb"> </span>dp<span style="color:#000;font-weight:bold">[</span>j<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-</span><span style="color:#bbb"> </span>w<span style="color:#000;font-weight:bold">[</span>i<span style="color:#000;font-weight:bold">]]</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb"> </span>v<span style="color:#000;font-weight:bold">[</span>i<span style="color:#000;font-weight:bold">]</span>);<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>System.<span style="color:#008080">out</span>.<span style="color:#008080">println</span>(dp<span style="color:#000;font-weight:bold">[</span>V<span style="color:#000;font-weight:bold">]</span>);<span style="color:#bbb"> </span>}<span style="color:#bbb"> </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><ul>
+<li>Python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>idx <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span> w <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">40003</span> v <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">40003</span> N, V <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split()) dp <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">2003</span> <span style="color:#000;font-weight:bold">for</span> _ <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(N): ww, vv, c <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split()) <span style="color:#000;font-weight:bold">if</span> c <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">0</span>: c <span style="color:#000;font-weight:bold">=</span> V <span style="color:#000;font-weight:bold">//</span> ww cnt <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span> <span style="color:#000;font-weight:bold">while</span> c <span style="color:#000;font-weight:bold">&gt;</span> cnt: idx <span style="color:#000;font-weight:bold">+=</span> <span style="color:#099">1</span> c <span style="color:#000;font-weight:bold">-=</span> cnt w[idx] <span style="color:#000;font-weight:bold">=</span> cnt <span style="color:#000;font-weight:bold">*</span> ww v[idx] <span style="color:#000;font-weight:bold">=</span> cnt <span style="color:#000;font-weight:bold">*</span> vv cnt <span style="color:#000;font-weight:bold">*=</span> <span style="color:#099">2</span> idx <span style="color:#000;font-weight:bold">+=</span> <span style="color:#099">1</span> w[idx] <span style="color:#000;font-weight:bold">=</span> c <span style="color:#000;font-weight:bold">*</span> ww v[idx] <span style="color:#000;font-weight:bold">=</span> c <span style="color:#000;font-weight:bold">*</span> vv <span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">1</span>, idx <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>): <span style="color:#000;font-weight:bold">for</span> j <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(V, w[i] <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>, <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>): dp[j] <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">max</span>(dp[j], dp[j <span style="color:#000;font-weight:bold">-</span> w[i]] <span style="color:#000;font-weight:bold">+</span> v[i]) <span style="color:#0086b3">print</span>(dp[V])
+</span></span></code></pre></div><h3 id="54-分组背包">5.4 分组背包</h3>
+<p>给定 $n$ 组物品，第 $i$ 组中有 $c_i$ 个物品，第 $i$ 组中第 $j$ 个物品的价值为 $p_{i,j}$ ，体积为 $v_{i,j}$，每组物品最多只能选择一个。</p>
+<p>背包大小为 $m$ ，问装载的最大价值。</p>
+<p>这个问题与原始的 $0/1$ 背包十分相似，复习下，原始的 $0/1$ 背包如何建立的状态转移：$dp_{i,j}$ 为处理到第 $i$ 个物品，装载体积为 $j$ 的最大价值。</p>
+<p>其转移为 $dp_{i,j} = \max(dp_{i-1, j} , dp_{i-1,j-v_i} + p_i)$</p>
+<p>我们只要稍作思考，就可以完成转化：</p>
+<p>我们定义：$dp_{i,j}$ 为处理到第 $i$ <strong>组</strong>物品，装载体积为 $j$ 的最大价值。</p>
+<p>那么转移为： $dp_{i,j} = \max(dp_{i-1, j} , \max_{1 \le j \le c_i}(dp_{i-1,j-v_{i,j}} + p_{i,j}))$ 观察到了吗，这两种甚至没有区别，只有再处理每一组的过程中进行了一次选择，逻辑通顺，完美转移！</p>
+<p>我们来看一道例题：</p>
+<h4 id="541-金明的预算httpswwwlanqiaocnproblems558learning">5.4.1 <a href="https://www.lanqiao.cn/problems/558/learning/">金明的预算</a></h4>
+<p><img src="./../images/%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%BF%9B%E9%98%B6%E7%AD%96%E7%95%A5%E8%AF%A6%E8%A7%A3/uid1792586-20240417-1713347341038.png" alt="图片描述"></p>
+<p>我们简化一下题意：</p>
+<p>有 $m$ 块钱，$n$ 件物品，每个物品的价值为 $p_i \times v_i$，价格为 $v_i$。有一些物品存在依赖关系，想要购买当前物品，就一定要购买前置物品。</p>
+<p>问能购买的最大价值。</p>
+<p><strong>条件</strong>：每一件物品最多只有<strong>两件</strong>附属物品。</p>
+<p>看起来是一个依赖有关的背包问题，但是仔细思考就会发现，如果 $A$ 物品有两件附属物品 $B,C$，那么对于这三件物品，只有这么几种情况 $\lbrace \varnothing \rbrace,\lbrace A \rbrace,\lbrace A,B \rbrace,\lbrace A, C \rbrace,\lbrace A, B, C \rbrace$，并且对于这三个物品的组合，只能选择<strong>一种</strong>。对于有一个附属物品和没有附属物品的情况，类似考虑。</p>
+<p>回过头来，是不是发现，很想分组背包的感觉。</p>
+<p>我们重新描绘一下题意：</p>
+<p>有 $m$ 块钱，$n$ 组物品，每组物品数量不超过三，每个物品有价值、价格。每组物品只能选择<strong>一种</strong>组合。问能购买的最大价值。</p>
+<p>完美转换为分组背包。</p>
+<p>代码如下：</p>
+<ul>
+<li>C++</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic"> #include &lt;vector&gt; using namespace std; int n, m; vector&lt;int&gt; G[65]; int v[65], p[65], q[65]; int dp[33000]; int main() { cin &gt;&gt; n &gt;&gt; m; for (int i = 1; i &lt;= m; ++i) { cin &gt;&gt; v[i] &gt;&gt; p[i] &gt;&gt; q[i]; p[i] *= v[i]; if (q[i]) { G[q[i]].push_back(i); } } for (int i = 1; i &lt;= m; ++i) { if (q[i] == 0) { for (int j = n; j &gt;= 0; --j) { if (j - v[i] &gt;= 0) dp[j] = max(dp[j], dp[j - v[i]] + p[i]); if (G[i].size() &gt; 0 &amp;&amp; j - v[i] - v[G[i][0]] &gt;= 0) dp[j] = max(dp[j], dp[j - v[i] - v[G[i][0]]] + p[i] + p[G[i][0]]); if (G[i].size() &gt; 1 &amp;&amp; j - v[i] - v[G[i][1]] &gt;= 0) dp[j] = max(dp[j], dp[j - v[i] - v[G[i][1]]] + p[i] + p[G[i][1]]); if (G[i].size() &gt; 1 &amp;&amp; j - v[i] - v[G[i][0]] - v[G[i][1]] &gt;= 0) dp[j] = max(dp[j], dp[j - v[i] - v[G[i][0]] - v[G[i][1]]] + p[i] + p[G[i][0]] + p[G[i][1]]); } } } cout &lt;&lt; dp[n] &lt;&lt; endl; return 0; }
+</span></span></span></code></pre></div><ul>
+<li>Java</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#555">java.util.ArrayList</span>;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#555">java.util.List</span>;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#555">java.util.Scanner</span>;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Main</span><span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>n,<span style="color:#bbb"> </span>m;<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">static</span><span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>Integer<span style="color:#000;font-weight:bold">&gt;[]</span><span style="color:#bbb"> </span>G<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>ArrayList<span style="color:#000;font-weight:bold">[</span>65<span style="color:#000;font-weight:bold">]</span>;<span style="color:#bbb"> </span><span style="color:#998;font-style:italic">// 使用ArrayList数组来表示图 static int[] v = new int[65], p = new int[65], q = new int[65]; static int[] dp = new int[33000]; public static void main(String[] args) { Scanner scanner = new Scanner(System.in); n = scanner.nextInt(); m = scanner.nextInt(); // 初始化G数组 for (int i = 0; i &lt; G.length; i++) { G[i] = new ArrayList&lt;&gt;(); } for (int i = 1; i &lt;= m; i++) { v[i] = scanner.nextInt(); p[i] = scanner.nextInt(); q[i] = scanner.nextInt(); p[i] *= v[i]; if (q[i] != 0) { G[q[i]].add(i); // 将后继节点i添加到q[i]的列表中 } } for (int i = 1; i &lt;= m; i++) { if (q[i] == 0) { for (int j = n; j &gt;= 0; j--) { if (j - v[i] &gt;= 0) dp[j] = Math.max(dp[j], dp[j - v[i]] + p[i]); // 处理后继节点 for (int k = 0; k &lt; G[i].size(); k++) { int nextItem = G[i].get(k); if (j - v[i] - v[nextItem] &gt;= 0) { dp[j] = Math.max(dp[j], dp[j - v[i] - v[nextItem]] + p[i] + p[nextItem]); } } if (G[i].size() &gt; 1) { int p1 = G[i].get(0), p2 = G[i].get(1); if (j - v[i] - v[p1] - v[p2] &gt;= 0) { dp[j] = Math.max(dp[j], dp[j - v[i] - v[p1] - v[p2]] + p[i] + p[p1] + p[p2]); } } } } } System.out.println(dp[n]); scanner.close(); } }</span><span style="color:#bbb">
+</span></span></span></code></pre></div><ul>
+<li>Python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>n, m <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split()) G <span style="color:#000;font-weight:bold">=</span> [[] <span style="color:#000;font-weight:bold">for</span> _ <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">65</span>)] v <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">65</span> p <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">65</span> q <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">65</span> dp <span style="color:#000;font-weight:bold">=</span> [<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">33000</span> <span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">1</span>, m <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>): v[i], p[i], q[i] <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">map</span>(<span style="color:#0086b3">int</span>, <span style="color:#0086b3">input</span>()<span style="color:#000;font-weight:bold">.</span>split()) p[i] <span style="color:#000;font-weight:bold">*=</span> v[i] <span style="color:#000;font-weight:bold">if</span> q[i]: G[q[i]]<span style="color:#000;font-weight:bold">.</span>append(i) <span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">1</span>, m <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>): <span style="color:#000;font-weight:bold">if</span> q[i] <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">0</span>: <span style="color:#000;font-weight:bold">for</span> j <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(n, <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>, <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>): <span style="color:#000;font-weight:bold">if</span> j <span style="color:#000;font-weight:bold">-</span> v[i] <span style="color:#000;font-weight:bold">&gt;=</span> <span style="color:#099">0</span>: dp[j] <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">max</span>(dp[j], dp[j <span style="color:#000;font-weight:bold">-</span> v[i]] <span style="color:#000;font-weight:bold">+</span> p[i]) <span style="color:#000;font-weight:bold">if</span> G[i]: <span style="color:#000;font-weight:bold">for</span> k <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#0086b3">len</span>(G[i])): <span style="color:#000;font-weight:bold">if</span> j <span style="color:#000;font-weight:bold">-</span> v[i] <span style="color:#000;font-weight:bold">-</span> v[G[i][k]] <span style="color:#000;font-weight:bold">&gt;=</span> <span style="color:#099">0</span>: dp[j] <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">max</span>(dp[j], dp[j <span style="color:#000;font-weight:bold">-</span> v[i] <span style="color:#000;font-weight:bold">-</span> v[G[i][k]]] <span style="color:#000;font-weight:bold">+</span> p[i] <span style="color:#000;font-weight:bold">+</span> p[G[i][k]]) <span style="color:#000;font-weight:bold">if</span> <span style="color:#0086b3">len</span>(G[i]) <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">1</span> <span style="color:#000;font-weight:bold">and</span> j <span style="color:#000;font-weight:bold">-</span> v[i] <span style="color:#000;font-weight:bold">-</span> v[G[i][<span style="color:#099">0</span>]] <span style="color:#000;font-weight:bold">-</span> v[G[i][<span style="color:#099">1</span>]] <span style="color:#000;font-weight:bold">&gt;=</span> <span style="color:#099">0</span>: dp[j] <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">max</span>(dp[j], dp[j <span style="color:#000;font-weight:bold">-</span> v[i] <span style="color:#000;font-weight:bold">-</span> v[G[i][<span style="color:#099">0</span>]] <span style="color:#000;font-weight:bold">-</span> v[G[i][<span style="color:#099">1</span>]]] <span style="color:#000;font-weight:bold">+</span> p[i] <span style="color:#000;font-weight:bold">+</span> p[G[i][<span style="color:#099">0</span>]] <span style="color:#000;font-weight:bold">+</span> p[G[i][<span style="color:#099">1</span>]]) <span style="color:#0086b3">print</span>(dp[n])
+</span></span></code></pre></div><h2 id="6-依赖背包">6. 依赖背包</h2>
+<p>这个比较复杂，一般来讲是树形的依赖关系，我们放在树形DP再讲。</p>
+<h2 id="7-作业">7. 作业</h2>
+<table>
+  <thead>
+      <tr>
+          <th>考点</th>
+          <th>题目</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>线性 DP</td>
+          <td><a href="https://www.lanqiao.cn/problems/2114/learning/">李白打酒-真题</a></td>
+      </tr>
+      <tr>
+          <td>线性 DP</td>
+          <td><a href="https://www.lanqiao.cn/problems/3545/learning/">保险箱-真题</a></td>
+      </tr>
+      <tr>
+          <td>背包问题</td>
+          <td><a href="https://www.lanqiao.cn/problems/5130/learning/">健身-算法赛</a></td>
+      </tr>
+      <tr>
+          <td>背包问题</td>
+          <td><a href="https://www.lanqiao.cn/problems/98/learning/">包子凑数</a></td>
+      </tr>
+  </tbody>
+</table>
+
+    </div>
+
+    
+
+    
+
+    <div class="container-prevnext">
+    <div><a href="https://one-ruri.github.io/posts/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%85%B8%E5%9E%8B%E9%A2%98%E5%9E%8B%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90/">← 状态压缩动态规划的典型题型深入分析</a></div>
+    <div><a href="https://one-ruri.github.io/posts/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E7%AC%AC2%E7%89%88%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">算法竞赛入门经典（第2版）学习记录  →</a></div>
+</div>
+    
+    <div class="container-comment">
+	<script src="https://utteranc.es/client.js"
+        repo="loveminimal/comment"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+	</script>
+</div>
+
+    
+</div>
+
+        </div>
+        <div id="footer"><div class="container-footer">
+    
+    <a href="//beian.miit.gov.cn" target="_blank">
+        
+        豫ICP备2022002918号-1
+        
+    </a>
+    <a id="s" href="/secrets">&nbsp;</a>
+    
+</div></div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python PyQT on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/python-pyqt/</link>
+    <description>Recent content in Python PyQT on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 17 Jul 2024 00:04:11 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/python-pyqt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PyQt应用开发</title>
+      <link>https://one-ruri.github.io/posts/pyqt%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Wed, 17 Jul 2024 00:04:11 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/pyqt%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</guid>
+      <description>&lt;h1 id=&#34;1gui开发框架简介&#34;&gt;1、GUI开发框架简介&lt;/h1&gt;&#xA;&lt;h2 id=&#34;11-通用开发框架&#34;&gt;1.1 通用开发框架&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; winform：基于C#语言，用于开发桌面应用程序，可以使用NanUI之类的UI库，开发选择多，运行占用内存大&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; javafx：基于java，主要用于跨平台桌面程序开发&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; electorn：基于node-js，跨平台，开发成本低，运行效率低&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; qt：基于C++，跨平台，效率高，开发成本高&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; flutter：基于dart语言，谷歌开源移动UI框架，可以快速在iOS和Android上构建高质量的原生用户界面&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;12-python方案&#34;&gt;1.2 Python方案&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;PyQT：PyQt5是Qt v5的Python版本，功能强大复杂，提供QT Designer设计UI （GPL V3协议，开源，商用收费）&lt;/li&gt;&#xA;&lt;li&gt;Pyside: PySide2是来自QT for Python项目的官方Python模块 （LGPL协议，闭源商用）&lt;/li&gt;&#xA;&lt;li&gt;Tkinter：Python标准库，Tk GUI 工具包的接口 ，布局通过代码实现，简单易用，但开发效率低&lt;/li&gt;&#xA;&lt;li&gt;WxPython：开源免费，提供wxFormbuilder，压缩版PyQT&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;本文主要详细介绍下PyQt5完整入门教程，包含环境配置，使用Qt Designer设计UI，最终完成一个天气预报的GUI实例开发。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typora on Walkssi</title>
+    <link>https://one-ruri.github.io/tags/typora/</link>
+    <description>Recent content in Typora on Walkssi</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 31 Jul 2024 00:54:51 +0000</lastBuildDate>
+    <atom:link href="https://one-ruri.github.io/tags/typora/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>typora配置图片上传（gitee仓库版）</title>
+      <link>https://one-ruri.github.io/posts/typora%E9%85%8D%E7%BD%AE%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0gitee%E4%BB%93%E5%BA%93%E7%89%88/</link>
+      <pubDate>Wed, 31 Jul 2024 00:54:51 +0000</pubDate>
+      <guid>https://one-ruri.github.io/posts/typora%E9%85%8D%E7%BD%AE%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0gitee%E4%BB%93%E5%BA%93%E7%89%88/</guid>
+      <description>&lt;h2 id=&#34;配置步骤&#34;&gt;配置步骤&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1在gitee上创建一个仓库一定是公开的仓库最好也初始化一下&#34;&gt;1.在gitee上创建一个仓库，一定是公开的仓库，最好也初始化一下&lt;/h3&gt;&#xA;&lt;h3 id=&#34;2生成gitee私人令牌&#34;&gt;2.生成gitee私人令牌&lt;/h3&gt;&#xA;&lt;p&gt;打开设置，找到私人令牌&amp;gt; 生成新令牌&lt;/p&gt;&#xA;&lt;h3 id=&#34;3配置tyopra&#34;&gt;3.配置tyopra&lt;/h3&gt;&#xA;&lt;p&gt;打开Typora，找到 &lt;code&gt;文件 &amp;gt; 偏好设置 &amp;gt; 图像&lt;/code&gt;：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./../images/typora%E9%85%8D%E7%BD%AE%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%EF%BC%88gitee%E4%BB%93%E5%BA%93%E7%89%88%EF%BC%89/image-20240731011407501.png&#34; alt=&#34;image-20240731011407501&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./../images/typora%E9%85%8D%E7%BD%AE%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%EF%BC%88gitee%E4%BB%93%E5%BA%93%E7%89%88%EF%BC%89/image-20240731011449144.png&#34; alt=&#34;image-20240731011449144&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
